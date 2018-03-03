@@ -1,5 +1,5 @@
 # Nintendo 64 C Notepad++ Syntax Highlighter
-Lets you see colors on your Notepad++<br/>
+Lets you see colors on your Notepad++<br/><br/>
 
 ### Installation
 * Download this repository
@@ -15,6 +15,7 @@ Edit the XML file inside the notepad++/plugins/config folder
 ### Bugs
 * -- is treated like a comment instead of a subtraction operation
 * #'s are not properly colored<br/>
+
 Please notify me about missing functions so that I can add them to the XML file
 
 ### FAQ
