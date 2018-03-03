@@ -19,5 +19,5 @@ Edit the XML file inside the notepad++/plugins/config folder<br/><br/>
 Please notify me about missing functions so that I can add them to the XML file
 <br/><br/>
 ### FAQ
-**Q:** Can you make this for Sublime?<br/>
-**A:** I don't use sublime so I can't help much, however given how easy it is to open the XML file there's nothing stopping you from grabbing all the function names and adding them yourself<br/><br/>
+**Q:** Can you make this for "Editor Name Here"?<br/>
+**A:** I don't use "Editor Name Here" so I can't help much, however given how easy it is to open the XML file there's nothing stopping you from grabbing all the function names and adding them yourself<br/><br/>
