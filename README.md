@@ -1,5 +1,5 @@
 # Nintendo 64 C Notepad++ Syntax Highlighter
-Lets you see colors on your Notepad++<br/><br/>
+Lets you see colors on your Notepad++ editor, as well as auto-completion functions.<br/><br/>
 
 ### Installation
 * Download this repository
