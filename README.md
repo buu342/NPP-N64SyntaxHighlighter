@@ -1,5 +1,5 @@
 # Nintendo 64 C Notepad++ Syntax Highlighter
-Lets you see colors on your Notepad++ editor, as well as auto-completion functions.<br/><br/>
+Provides Syntax Highlighting and Auto-Completion functions for Nintendo 64 C. For use with Notepad++.<br/><br/>
 
 ### Installation
 * Download this repository
