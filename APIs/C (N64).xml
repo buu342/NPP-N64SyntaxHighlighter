@@ -33,7 +33,7 @@ Drive.">
         </KeyWord>
 
         <KeyWord name="LeoClearQueue" func="yes">
-            <Overload retVal="s32" descr="Clears the Leo Manager’s command queue.">
+            <Overload retVal="s32" descr="Clears the Leo Managerâ€™s command queue.">
                 <Param name="void" />
             </Overload>
         </KeyWord>
@@ -4569,14 +4569,14 @@ character (a through f, A through F, or 0 through 9).">
         </KeyWord>
 
         <KeyWord name="ldexp" func="yes">
-            <Overload retVal="double" descr="Calculates x*(2ˆexp) where x is of the double type.">
+            <Overload retVal="double" descr="Calculates x*(2Ë†exp) where x is of the double type.">
                 <Param name="double x" />
                 <Param name="int exp" />
             </Overload>
         </KeyWord>
 
         <KeyWord name="ldexpf" func="yes">
-            <Overload retVal="float" descr="Calculates x*(2ˆexp) where x is of the floating point type.">
+            <Overload retVal="float" descr="Calculates x*(2Ë†exp) where x is of the floating point type.">
                 <Param name="float x" />
                 <Param name="int exp" />
             </Overload>
@@ -6398,6 +6398,1556 @@ direct-mapped CPU address.">
         <KeyWord name="OS_USEC_TO_CYCLES" func="yes">
             <Overload retVal="OSTime" descr="Converts from microseconds to CPU Count register cycles.">
                 <Param name="u64 usecs" />
+            </Overload>
+        </KeyWord>
+		
+        <KeyWord name="nuAuHeapAlloc" func="yes">
+            <Overload retVal="void*" descr="Reserve specified area from audio heap memory.">
+                <Param name="s32 length" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuHeapGetFree" func="yes">
+            <Overload retVal="s32" descr="Get free space in audio heap memory.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuHeapGetUsed" func="yes">
+            <Overload retVal="s32" descr="Get used space in audio heap memory.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuInit" func="yes">
+            <Overload retVal="s32" descr="Initializes the Audio Manager, and activates two sequence
+players and one sound player. It also registers the default function
+called when a PRE-NMI event is generated.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuMgrInit" func="yes">
+            <Overload retVal="s32" descr="Initializes the Audio Manager. Also initializes and activates
+the synthesizer driver.">
+                <Param name="void* heap_ptr" />
+                <Param name="u32 size" />
+                <Param name="alsynconfig* synconfig" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuPreNMIFuncRemove" func="yes">
+            <Overload retVal="void" descr="Removes the PRE-NMI process callback function.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuPreNMIFuncSet" func="yes">
+            <Overload retVal="void" descr="Registers the PRE-NMI process callback function.">
+                <Param name="nuauprenmifunc func" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSeqPlayerBankSet" func="yes">
+            <Overload retVal="void" descr="Enters a bank in the sequence player..">
+                <Param name="u8* bank_ptr" />
+                <Param name="u32 bank_size" />
+                <Param name="u8* table_ptr" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSeqPlayerFadeOut" func="yes">
+            <Overload retVal="void" descr="Fades out the sequence being played by the player specified by
+the sequence player number..">
+                <Param name="u32 player_no " />
+                <Param name="u32 speed" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSeqPlayerGetChlFXMix" func="yes">
+            <Overload retVal="u8" descr="Gets the effects mix value of the specified MIDI channel of
+the player specified by the sequence player number.">
+                <Param name="u32 player_no" />
+                <Param name="u8 chan" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSeqPlayerGetChlPan" func="yes">
+            <Overload retVal="alpan" descr="Gets the pan value of the specified MIDI channel of the player
+specified by the sequence player number.">
+                <Param name="u32 player_no" />
+                <Param name="u8 chan" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSeqPlayerGetChlPriority" func="yes">
+            <Overload retVal="u8" descr="Gets the priority level of the specified MIDI channel of the
+player specified by the sequence player number.">
+                <Param name="u32 player_no" />
+                <Param name="u8 chan" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSeqPlayerGetChlProgram" func="yes">
+            <Overload retVal="s32" descr="Gets the program number of the specified MIDI channel of the
+player specified by the sequence player number.">
+                <Param name="u32 player_no" />
+                <Param name="u8 chan" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSeqPlayerGetChlVol" func="yes">
+            <Overload retVal="u8" descr="Gets the volume of the specified MIDI channel of the player
+specified by the sequence player number.">
+                <Param name="u32 player_no" />
+                <Param name="u8 chan" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSeqPlayerGetSeqno" func="yes">
+            <Overload retVal="u32" descr="Gets the sequence number set for the player specified by
+sequence player number.">
+                <Param name="u32 player_no" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSeqPlayerGetState" func="yes">
+            <Overload retVal="s32" descr="Gets the state of the player specified by the sequence player
+number.">
+                <Param name="u32 player_no" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSeqPlayerGetTempo" func="yes">
+            <Overload retVal="s32" descr="Returns the tempo of the player specified by the sequence
+player number.">
+                <Param name="u32 player_no" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSeqPlayerGetVol" func="yes">
+            <Overload retVal="s16" descr="Returns the volume of the player specified by the sequence
+player number.">
+                <Param name="u32 player_no" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSeqPlayerInit" func="yes">
+            <Overload retVal="void" descr="Initializes the sequence player.">
+                <Param name="alseqpconfig* seqpconfig" />
+                <Param name="u32 size" />
+                <Param name="u32 player_no" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSeqPlayerPlay" func="yes">
+            <Overload retVal="void" descr="Specifies the number of the player who will play back the
+sequence assigned by a nuAuSeqPlayerSetNo function.">
+                <Param name="u32 player_no" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSeqPlayerSendMidi" func="yes">
+            <Overload retVal="void" descr="Sends a MIDI message to the player specified by the sequence
+player number. For details see the alSeqpSendMidi function in the
+N64 Fuctions Reference.">
+                <Param name="u32 player_no" />
+                <Param name="long ticks" />
+                <Param name="u8 status" />
+                <Param name="u8 byte1" />
+                <Param name="u8 byte2" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSeqPlayerSeqSet" func="yes">
+            <Overload retVal="void" descr="Sets the ROM address of the MIDI sequence bank data in the
+sequence player.">
+                <Param name="u8* seq_addr" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSeqPlayerSetChlFXMix" func="yes">
+            <Overload retVal="void" descr="Sets the effects mix value of the player specified by the
+sequence player number.">
+                <Param name="u32 player_no" />
+                <Param name="u8 chan" />
+                <Param name="u8 fxmix" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSeqPlayerSetChlPan" func="yes">
+            <Overload retVal="void" descr="Sets the pan value of the specified MIDI channel of the player
+specified by the sequence player number..">
+                <Param name="u32 player_no" />
+                <Param name="u8 chan" />
+                <Param name="alpan pan" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSeqPlayerSetChlPriority" func="yes">
+            <Overload retVal="void" descr="Sets the priority level of the specified MIDI channel of the
+player specified by the sequence player number.">
+                <Param name="u32 player_no" />
+                <Param name="u8 chan" />
+                <Param name="u8 priority" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSeqPlayerSetChlProgram" func="yes">
+            <Overload retVal="void" descr="Assigns program number to the specified MIDI channel of the
+player specified by the sequence player number.">
+                <Param name="u32 player_no" />
+                <Param name="u8 chan" />
+                <Param name="s32 prog" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSeqPlayerSetChlVol" func="yes">
+            <Overload retVal="void" descr="Sets the volume of the specified MIDI channel of the player
+specified by the sequence player number.">
+                <Param name="u32 player_no" />
+                <Param name="u8 chan" />
+                <Param name="u8 vol" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSeqPlayerSetNo" func="yes">
+            <Overload retVal="void" descr="Specifies the number of the player who will play back the
+sequence assigned by a nuAuSeqPlayerSetNo function.">
+                <Param name="u32 player_no " />
+                <Param name="u32 seq_no" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSeqPlayerSetTempo" func="yes">
+            <Overload retVal="void" descr="Sets the sequence tempo of the player specified by the
+sequence player number.">
+                <Param name="u32 player_no" />
+                <Param name="s32 tempo" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSeqPlayerSetVol" func="yes">
+            <Overload retVal="void" descr="Sets the overall volume of sequence for the player specified
+by the sequence player number.">
+                <Param name="u32 player_no" />
+                <Param name="s16 vol" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSeqPlayerStop" func="yes">
+            <Overload retVal="void" descr="Stops the player with the specified sequence player number.">
+                <Param name="u32 player_no" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSndPlayerBankSet" func="yes">
+            <Overload retVal="void" descr="Enters the bank in the sound player. The bank controls data
+and bank table data using the .ct1 and .tbl files made with the ic
+command.">
+                <Param name="u8* bank_addr" />
+                <Param name="u32 bank_size" />
+                <Param name="u8* table_addr" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSndPlayerGetState" func="yes">
+            <Overload retVal="s32" descr="Gets the current playback state of a sound..">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSndPlayerInit" func="yes">
+            <Overload retVal="void" descr="Initializes the sound player..">
+                <Param name="alsndpconfig* sndconfig" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSndPlayerPlay" func="yes">
+            <Overload retVal="alsndid" descr="Plays the sound specified by the sound number.">
+                <Param name="u32 sndno" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSndPlayerSetFXMix" func="yes">
+            <Overload retVal="void" descr="Sets the effects mix of the sound in the sound player.">
+                <Param name="u8 fxmix" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSndPlayerSetPan" func="yes">
+            <Overload retVal="void" descr="Sets the pan value of the sound in the sound player.">
+                <Param name="alpan pan" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSndPlayerSetPitch" func="yes">
+            <Overload retVal="void" descr="Sets the pitch of the sound in the sound player.">
+                <Param name="f32 pitch" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSndPlayerSetPriority" func="yes">
+            <Overload retVal="nuausndplayersetpriority(alsndid" descr="Sets the priority level of the sound in the sound player.">
+                <Param name="alsndid id" />
+                <Param name="u8 priority" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSndPlayerSetSound" func="yes">
+            <Overload retVal="void" descr="Specifies the sound of sound player. Used when specifying
+sound stop and effect values.">
+                <Param name="alsndid sndid" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSndPlayerSetVol" func="yes">
+            <Overload retVal="void" descr="Sets the volume of the sound in the sound player.">
+                <Param name="s16 vol" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuSndPlayerStop" func="yes">
+            <Overload retVal="void" descr="Stops the playback of sound..">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+		
+        <KeyWord name="nuAuStlHeapAlloc" func="yes">
+            <Overload retVal="void*" descr="	Reserve specified area from audio heap memory.">
+                <Param name="s32 length" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlHeapGetFree" func="yes">
+            <Overload retVal="s32" descr="Get size of available space in audio heap memory.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlHeapGetUsed" func="yes">
+            <Overload retVal="s32" descr="Get size of used space in audio heap memory.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlInit" func="yes">
+            <Overload retVal="void" descr="Initialize the audio manager, activate the sequence player and the sound player.">
+                <Param name="musConfig *config" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlMgrInit" func="yes">
+            <Overload retVal="s32" descr="Initialize the audio manager.">
+                <Param name="musConfig* config" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlPtrBankInit" func="yes">
+            <Overload retVal="void" descr="Initialize sound pointer bank.">
+                <Param name="u32 pbk_size" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlPtrBankSet" func="yes">
+            <Overload retVal="void" descr="	Register sound bank in player.">
+                <Param name="u8 *pbk_addr" />
+                <Param name="u32 pbk_size" />
+                <Param name="u8 *wbk_addr" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlSeqPlayerDataSet" func="yes">
+            <Overload retVal="void" descr="Reads MIDI sequence data into the sequence player buffer.">
+                <Param name="u32 player_no" />
+                <Param name="u8 *seq_addr" />
+                <Param name="u32 seq_size" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlSeqPlayerGetSeqState" func="yes">
+            <Overload retVal="s32" descr="Returns the channel number being used by the sequence
+specified by the sequence handler.">
+                <Param name="u32 player_no" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlSeqPlayerGetState" func="yes">
+            <Overload retVal="s32" descr="Returns the channel number being used by the sequence player.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlSeqPlayerInit" func="yes">
+            <Overload retVal="void" descr="Initialize sequence player.">
+                <Param name="u32 player_no" />
+                <Param name="u32 size" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlSeqPlayerPlay" func="yes">
+            <Overload retVal="musHandle" descr="Plays a sequence. It can also change the parameters of a
+sequence using the returned sequence handler.">
+                <Param name="u32 player_no" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlSeqPlayerSeqStop" func="yes">
+            <Overload retVal="s32" descr="Stops the performance of sequence specified by the sequence
+handler.">
+                <Param name="s32 player_no" />
+                <Param name="s32 speed" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlSeqPlayerSetMasterVol" func="yes">
+            <Overload retVal="void" descr="Sets the overall sequence player volume.">
+                <Param name="s32 volume" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlSeqPlayerSetSeqPan" func="yes">
+            <Overload retVal="s32" descr="Sets the pan value of the sequence specified by the sequence
+handler.">
+                <Param name="s32 player_no" />
+                <Param name="s32 pan" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlSeqPlayerSetSeqTempo" func="yes">
+            <Overload retVal="s32" descr="Changes the tempo of the sequence specified by the sequence
+handler.">
+                <Param name="s32 player_no" />
+                <Param name="s32 tempo" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlSeqPlayerSetSeqVol" func="yes">
+            <Overload retVal="s32" descr="Sets the volume of the sequence specified by the sequence
+handler.">
+                <Param name="s32 player_no" />
+                <Param name="s32 volume" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlSeqPlayerStop" func="yes">
+            <Overload retVal="void" descr="Stops the entire sequence performance.">
+                <Param name="s32 speed" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlSndPlayerGetSndState" func="yes">
+            <Overload retVal="s32" descr="Returns the number of channels currently being used.">
+                <Param name="u32 handle" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlSndPlayerGetState" func="yes">
+            <Overload retVal="s32" descr="Returns the number of channels currently in use by the sound
+player.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlSndPlayerPlay" func="yes">
+            <Overload retVal="u32" descr="Plays the sound specified by sound number. It can also change
+the parameters of the sound using the returned sound handler.">
+                <Param name="u32 sndNo" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlSndPlayerPlay2" func="yes">
+            <Overload retVal="u32" descr="Plays the sound specified by sound number. It can also change
+the parameters of the sound using the returned sound handler.">
+                <Param name="u32 sndNo" />
+                <Param name="s32 volume" />
+                <Param name="s32 pan" />
+                <Param name="s32 restartflag" />
+                <Param name="s32 priority" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlSndPlayerSetMasterVol" func="yes">
+            <Overload retVal="void" descr="Sets the overall sound player volume.">
+                <Param name="s32 volume" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlSndPlayerSetSndPan" func="yes">
+            <Overload retVal="s32" descr="Sets the pan value of the sound specified by the sound handler.">
+                <Param name="u32 handle" />
+                <Param name="s32 pan" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlSndPlayerSetSndPitch" func="yes">
+            <Overload retVal="s32" descr="Sets the pitch value of the sound specified by the sound
+handler.">
+                <Param name="u32 handle" />
+                <Param name="s32 pitch" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlSndPlayerSetSndVol" func="yes">
+            <Overload retVal="s32" descr="Sets the volume of the sound specified by the sound handler.">
+                <Param name="u32 handle" />
+                <Param name="s32 volume" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlSndPlayerSndStop" func="yes">
+            <Overload retVal="s32" descr="Stops the sound specified by the sound handler.">
+                <Param name="u32 handle" />
+                <Param name="s32 speed" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuAuStlSndPlayerStop" func="yes">
+            <Overload retVal="void" descr="Stops all sounds.">
+                <Param name="s32 speed" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContDataGet" func="yes">
+            <Overload retVal="void" descr="Gets the Controller data by copying it from the internal
+buffer. To get the data from four Controllers use the
+nuContDataGetAll function.">
+                <Param name="OSContPad *contpad" />
+                <Param name="u32 cont_no" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContDataGetAll" func="yes">
+            <Overload retVal="void" descr="Gets the Controller data by copying it from the internal
+buffer. To get the data from four Controllers use the
+nuContDataGetAll function.">
+                <Param name="OSContPad *contpad" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContDataGetEx" func="yes">
+            <Overload retVal="void" descr="Gets Controller data and stores it in contdata.">
+                <Param name="NUContData *contdata" />
+                <Param name="u32 padno" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContDataGetExAll" func="yes">
+            <Overload retVal="void" descr="Gets Controller data from all four Controllers.">
+                <Param name="NUContData *contdata" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContDataLock" func="yes">
+            <Overload retVal="void" descr="Locks the Controller data so it cannot be updated by the
+Controller Manager.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContDataRead" func="yes">
+            <Overload retVal="void" descr="Reads the Controller data.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContDataReadStart" func="yes">
+            <Overload retVal="void" descr="Starts to read Controller data. The read is not synchronized,
+so it is quickly returned, unlike with the nuContDataRead
+function.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContDataReadWait" func="yes">
+            <Overload retVal="void" descr="Waits for the end of the reading of Controller data that was
+begun with the nuContDataReadStart function. It can also be used
+to wait for the Controller Manager to finish reading Controller
+data at the time of a retrace.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContDataUnLock" func="yes">
+            <Overload retVal="void" descr="Removes the lock set on the Controller data.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContGBPakCheckConnector" func="yes">
+            <Overload retVal="s32" descr="Detects poor connection in GB Game Pak connector.">
+                <Param name="NUContPakFile* handle" />
+                <Param name="u8" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContGBPakFread" func="yes">
+            <Overload retVal="s32" descr="Reads high-performance GB Game Pak data.">
+                <Param name="NUContPakFile* handle" />
+                <Param name="u16 address" />
+                <Param name="u8" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContGBPakFwrite" func="yes">
+            <Overload retVal="s32" descr="Writes high-performance GB Game Pak data.">
+                <Param name="NUContPakFile* handle" />
+                <Param name="u16 address" />
+                <Param name="u8" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContGBPakGetStatus" func="yes">
+            <Overload retVal="s32" descr="Gets GB Pak status.">
+                <Param name="NUContPakFile* handle" />
+                <Param name="u8* status" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContGBPakMgrInit" func="yes">
+            <Overload retVal="void" descr="Initializes GB Pak Manager.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContGBPakMgrRemove" func="yes">
+            <Overload retVal="void" descr="Remove GB Pak Manager.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContGBPakOpen" func="yes">
+            <Overload retVal="s32" descr="Opens GB Pak.">
+                <Param name="NUContPakFile* handle" />
+                <Param name="s32 contNo" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContGBPakPower" func="yes">
+            <Overload retVal="s32" descr="Controls power to the GB Game Pak.">
+                <Param name="NUContPakFile* handle" />
+                <Param name="s32 flag" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContGBPakReadID" func="yes">
+            <Overload retVal="s32" descr="Checks registered area of ROM in GB Game Pak.">
+                <Param name="NUContPakFile* handle" />
+                <Param name="OSGbpakId* id" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContGBPakReadWrite" func="yes">
+            <Overload retVal="s32" descr="Read/write data from/to GB Game Pak.">
+                <Param name="NUContPakFile* handle" />
+                <Param name="u16 flag " />
+                <Param name="u1" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContGBPakRegWrite" func="yes">
+            <Overload retVal="s32" descr="Writes to Memory Controller register.">
+                <Param name="NUContPakFile* handle" />
+                <Param name="u16 addr" />
+                <Param name="u" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContInit" func="yes">
+            <Overload retVal="u8" descr="Initializes the Controller as well as the Controller Pak.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContMgrInit" func="yes">
+            <Overload retVal="u8" descr="Initializes and activates the Controller Manager.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContMgrRemove" func="yes">
+            <Overload retVal="u8" descr="Removes the Controller Manager from the Serial Interface (SI)
+Manager.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContPakCodeSet" func="yes">
+            <Overload retVal="void" descr="Registers in the Controller Manager the company code and game
+code found among the attributes in the Controller Pak's game
+note.">
+                <Param name="u8* companyCode" />
+                <Param name="u8* gameCode" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContPakFileDelete" func="yes">
+            <Overload retVal="s32" descr="Deletes the game note in the Controller Pak.">
+                <Param name="NUContPakFile *file" />
+                <Param name="u8* noteName" />
+                <Param name="u8" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContPakFileDeleteJis" func="yes">
+            <Overload retVal="s32" descr="Deletes Controller Pak game note. This function is the same as
+nuContPakFileDelete, except it can specify names and extensions
+with JIS code.">
+                <Param name="NUContPakFile *file" />
+                <Param name="u8* noteName" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContPakFileFind" func="yes">
+            <Overload retVal="void" descr="Searches to see if the specified game note exists in the
+Controller Pak. It is a macro of the nuContPakFileOpen function.">
+                <Param name="NUContPakFile *file" />
+                <Param name="u8* noteName" />
+                <Param name="u8* extName" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContPakFileFindJis" func="yes">
+            <Overload retVal="void" descr="Searches for game note like nuContPakFileFind, except it can
+specify game note names and extensions with JIS code.">
+                <Param name="NUContPakFile *file" />
+                <Param name="u8* noteName" />
+                <Param name="u8* extName" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContPakFileFread" func="yes">
+            <Overload retVal="s32" descr="Reads game data from Controller Pak game note.">
+                <Param name="NUContPakFile *file" />
+                <Param name="s32 offset" />
+                <Param name="s3" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContPakFileFwrite" func="yes">
+            <Overload retVal="s32" descr="Writes game data to Controller Pak game note.">
+                <Param name="NUContPakFile *file" />
+                <Param name="s32 offset" />
+                <Param name="s3" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContPakFileNum" func="yes">
+            <Overload retVal="s32" descr="Gets the number of notes being used in the Controller Pak and
+the maximum number of notes.">
+                <Param name="NUContPakFile *file" />
+                <Param name="s32 *max_files" />
+                <Param name="s3" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContPakFileOpen" func="yes">
+            <Overload retVal="s32" descr="Searches to see if the specified game note exists in the
+Controller Pak. It is a macro of the nuContPakFileOpen function.">
+                <Param name="NUContPakFile *file" />
+                <Param name="u8* noteName" />
+                <Param name="u8" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContPakFileOpenJis" func="yes">
+            <Overload retVal="s32" descr="Opens the Controller Pak game note as does the
+nuContPakFileOpen function, except this function can specify game note names
+and extensions with JIS code.">
+                <Param name="NUContPakFile *file" />
+                <Param name="u8* noteName" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContPakFileRead" func="yes">
+            <Overload retVal="void" descr="Reads the Controller Pak data. It is a macro of the
+nuContPakFileReadWrite function.">
+                <Param name="NUContPakFile *file" />
+                <Param name="s32 offset" />
+                <Param name="s32 size" />
+                <Param name="u8* buf" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContPakFileReadWrite" func="yes">
+            <Overload retVal="s32" descr="Reads the Controller Pak data. It is a macro of the
+nuContPakFileReadWrite function.">
+                <Param name="NUContPakFile *file" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContPakFileState" func="yes">
+            <Overload retVal="s32" descr="Gets Controller Pak game note information.">
+                <Param name="NUContPakFile* file" />
+                <Param name="OSPfsState* state" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContPakFileWrite" func="yes">
+            <Overload retVal="void" descr="Writes data to the Controller Pak. It is a macro of the
+nuContPakFileReadWrite function.">
+                <Param name="NUContPakFile *file" />
+                <Param name="s32 offset" />
+                <Param name="s32 size" />
+                <Param name="u8* buf" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContPakGetFree" func="yes">
+            <Overload retVal="s32" descr="Gets the free space in bytes in the Controller Pak.">
+                <Param name="NUContPakFile *file" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContPakJisToN64" func="yes">
+            <Overload retVal="void" descr="Converts JIS code into N64 font code.">
+                <Param name="u8* src" />
+                <Param name="u8* dest" />
+                <Param name="u32 len" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContPakMgrInit" func="yes">
+            <Overload retVal="void" descr="Registers the Controller Pak Manager in the Controller Manager.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContPakMgrRemove" func="yes">
+            <Overload retVal="void" descr="Removes the Controller Pak Manager from the Serial Interface
+(SI) Manager.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContPakN64ToJis" func="yes">
+            <Overload retVal="void" descr="Converts N64 font code into JIS code.">
+                <Param name="u8* src" />
+                <Param name="u8* dest" />
+                <Param name="u32 len" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContPakOpen" func="yes">
+            <Overload retVal="void" descr="Checks to see whether the Controller Pak or Rumble Pak is
+inserted. If the Controller Pak is inserted, it initializes a file
+to gain access to the Controller Pak.">
+                <Param name="NUContPakFile *file" />
+                <Param name="u32 cont_no" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContPakRepairId" func="yes">
+            <Overload retVal="s32" descr="Repairs Controller Pak file system.">
+                <Param name="NUContPakFile *file" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContQueryRead" func="yes">
+            <Overload retVal="void" descr="Gets the Controller status. Note that it takes around 2 ms to
+get the Controller status, so this is a performance hit.">
+                <Param name="OSContStatus* status" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContReadFuncRemove" func="yes">
+            <Overload retVal="void" descr="Removes the callback function that the Controller Manager
+would otherwise execute after the Controller data has been read at
+the time of a retrace.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContReadFuncSet" func="yes">
+            <Overload retVal="void" descr="Registers the callback function that will be executed after
+the Controller data has been read at the time of a retrace. As the
+default, nothing is entered.">
+                <Param name="NUContReadFunc func" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContRmbCheck" func="yes">
+            <Overload retVal="s32" descr="Checks the Rumble Pak to see if the Rumble Pak is inserted and
+if so, it enables control over the Rumble Pak. Unlike
+nuContPakOpen, this function does not check to see if the Controller Pak
+is inserted..">
+                <Param name="u32 contNo" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContRmbForceStop" func="yes">
+            <Overload retVal="void" descr="Forces the Rumble Pak to stop.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContRmbForceStopEnd" func="yes">
+            <Overload retVal="void" descr="Removes the Rumble Pak forced stop so it can operate again..">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContRmbMgrInit" func="yes">
+            <Overload retVal="void" descr="Initializes the Rumble Pak Manager by initializing the Rumble
+Pak control structure and registering the Rumble Pak Manager in
+the Controller Manager.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContRmbMgrRemove" func="yes">
+            <Overload retVal="void" descr="Removes the Rumble Pak Manager from the Serial Interface (SI)
+Manager.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContRmbModeSet" func="yes">
+            <Overload retVal="void" descr="Sets the operation mode of the Rumble Pak.">
+                <Param name="u32 contNo" />
+                <Param name="u8 mode" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContRmbSearchTimeSet" func="yes">
+            <Overload retVal="void" descr="Sets the interval of time (in units of frames) between checks
+to see if the Rumble Pak is inserted when NU_CONT_RMB_MODE_AUTO
+is specified in the nuContRmbModeSet function.">
+                <Param name="u32 frame" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContRmbStart" func="yes">
+            <Overload retVal="void" descr="Initiates the Rumble Pak.">
+                <Param name="u32 contNo" />
+                <Param name="u16 freq" />
+                <Param name="u16 frame" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContRmbStop" func="yes">
+            <Overload retVal="void" descr="Stops vibration in Rumble Pak.">
+                <Param name="u32 contNo" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuSiCallBackAdd" func="yes">
+            <Overload retVal="u8" descr="Registers a specified device manager in the SI Manager.">
+                <Param name="NUCallBackList* list" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuSiCallBackRemove" func="yes">
+            <Overload retVal="u8" descr="Removes the device manager that is currently registered in the
+SI Manager.">
+                <Param name="NUCallBackList* list" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuSiMgrInit" func="yes">
+            <Overload retVal="Arguments" descr="Initializes and activates the Serial Interface (SI) Manager.">
+                <Param name="" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuSiMgrRestart" func="yes">
+            <Overload retVal="void" descr="Restarts SI Manager thread.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuSiMgrStop" func="yes">
+            <Overload retVal="void" descr="Stops SI Manager thread.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuSiSendMesg" func="yes">
+            <Overload retVal="s32" descr="Sends message to SI Manager (synchronous).">
+                <Param name="NUScMsg mesg" />
+                <Param name="void* dataPtr" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuSiSendMesgNW" func="yes">
+            <Overload retVal="void" descr="Sends message to SI Manager (asynchronous).">
+                <Param name="NUScMsg mesg" />
+                <Param name="void* dataPtr" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuVrsCheckWord" func="yes">
+            <Overload retVal="s32" descr="Checks words which can be stored.">
+                <Param name="u8* word" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuVrsClearDictionary" func="yes">
+            <Overload retVal="s32" descr="Initializes Voice Recognition System word dictionary.">
+                <Param name="NUVrsHandle* handle" />
+                <Param name="u8 words" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuVrsControlGain" func="yes">
+            <Overload retVal="s32" descr="Adjusts input gain.">
+                <Param name="NUVrsHandle* handle" />
+                <Param name="s32 analog" />
+                <Param name="s32 digital" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuVrsCountSyllables" func="yes">
+            <Overload retVal="void" descr="Counts syllables of word.">
+                <Param name="u8* word" />
+                <Param name="u32* syllables" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuVrsGetReadData" func="yes">
+            <Overload retVal="s32" descr="Gets recognition results.">
+                <Param name="NUVrsHandle* handle" />
+                <Param name="NUVrsData* data" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuVrsMaskDictionary" func="yes">
+            <Overload retVal="s32" descr="Selects recognition targets from words stored in dictionary.">
+                <Param name="NUVrsHandle* handle" />
+                <Param name="u8* maskpattern" />
+                <Param name="s32 size" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuVrsMgrInit" func="yes">
+            <Overload retVal="void" descr="Initializes Voice Recognition Manager.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuVrsOpen" func="yes">
+            <Overload retVal="s32" descr="Initializes Voice Recognition System.">
+                <Param name="NUVrsHandle* handle" />
+                <Param name="s32 contNo" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuVrsSetWord" func="yes">
+            <Overload retVal="s32" descr="Stores word in dictionary.">
+                <Param name="NUVrsHandle* handle" />
+                <Param name="u8* word" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuVrsStartReadData" func="yes">
+            <Overload retVal="s32" descr="Starts voice recognition.">
+                <Param name="NUVrsHandle* handle" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuVrsStopReadData" func="yes">
+            <Overload retVal="s32" descr="Forced stop of recognition processing.">
+                <Param name="NUVrsHandle* handle" />
+            </Overload>
+        </KeyWord>
+		
+        <KeyWord name="nuDebConClear" func="yes">
+            <Overload retVal="void" descr="Clears the buffer of the console window specified by wndNo.">
+                <Param name="u32 wndNo" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuDebConCPuts" func="yes">
+            <Overload retVal="void" descr="Sends the character string 's' to the console specified by
+wndNo. Unlike nuDebConPuts, this function does not replace the
+end-of-string null character ('\0') with the new-line character
+('\n').">
+                <Param name="u32 wndNo" />
+                <Param name="const char *s" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuDebConDisp" func="yes">
+            <Overload retVal="void" descr="Displays the console output on the screen in ASCII characters.">
+                <Param name="u32 flag" />
+            </Overload>
+        </KeyWord>
+		
+        <KeyWord name="nuDebConDispEX2" func="yes">
+            <Overload retVal="void" descr="Displays the console output on the screen in ASCII characters.">
+                <Param name="u32 flag" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuDebConPrintf" func="yes">
+            <Overload retVal="void" descr="Outputs formatted character string to console window.">
+                <Param name="u32 wndNo" />
+                <Param name="const char *fmt" />
+                <Param name="..." />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuDebConPutc" func="yes">
+            <Overload retVal="void" descr="Sends the character 'c' to the console specified by wndNo..">
+                <Param name="u32 wndNo" />
+                <Param name="u32 c" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuDebConPuts" func="yes">
+            <Overload retVal="void" descr="Sends the character string 's' to the console specified by
+wndNo. Unlike nuDebConPuts, this function does not replace the
+end-of-string null character ('\0') with the new-line character
+('\n').">
+                <Param name="u32 wndNo" />
+                <Param name="const char *s" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuDebConScroll" func="yes">
+            <Overload retVal="void" descr="Turns the console window scroll on or off. Use it to specify
+whether to scroll at the end character of the bottom-most line.">
+                <Param name="u32 wndNo" />
+                <Param name="u32 flag" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuDebConTextAttr" func="yes">
+            <Overload retVal="void" descr="Sets the text attribute.">
+                <Param name="u32 wndNo" />
+                <Param name="u32 attr" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuDebConTextColor" func="yes">
+            <Overload retVal="void" descr="Changes the color of the text output to the console window.">
+                <Param name="u32 wndNo" />
+                <Param name="u32 color" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuDebConTextPos" func="yes">
+            <Overload retVal="void" descr="Sets the location of the text display within a specified
+console window.">
+                <Param name="u32 wndNo" />
+                <Param name="u32 posX" />
+                <Param name="u32 posY" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuDebConWindowPos" func="yes">
+            <Overload retVal="void" descr="Sets the display position of the console window. The initial
+settings are (0,0) for the upper-left coordinate.">
+                <Param name="u32 wndNo" />
+                <Param name="u32 winX" />
+                <Param name="u32 windY" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuDebConWindowSet" func="yes">
+            <Overload retVal="void" descr="Sets the display position and size of the console window. The
+initial settings are an upper-left coordinate of (0,0) and a a
+size of 40 columns and 30 lines.">
+                <Param name="u32 wndNo" />
+                <Param name="u32 winX" />
+                <Param name="u32 windY" />
+                <Param name="u32 width" />
+                <Param name="u32 height" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuDebConWindowShow" func="yes">
+            <Overload retVal="void" descr="Sets the console window to be displayed or not. Turning the
+console window off speeds up console display processes.">
+                <Param name="u32 wndNo" />
+                <Param name="u32 flag" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuDebConWindowSize" func="yes">
+            <Overload retVal="void" descr="Sets the display size of the console window. The initial
+settings are 40 columns and 30 lines.">
+                <Param name="u32 wndNo" />
+                <Param name="u32 winX" />
+                <Param name="u32 windY" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuDebTaskPerfBar0" func="yes">
+            <Overload retVal="void" descr="Displays a (type 0) performance barometer for a graphics task
+as well as for an audio task. This function internally sets the
+RDP, creates the display list, and activates the graphics task.">
+                <Param name="u32 frameNum" />
+                <Param name="u32 y" />
+                <Param name="u32 flag" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuDebTaskPerfBar1" func="yes">
+            <Overload retVal="void" descr="Displays a (type 1) performance barometer for a graphics task
+as well as for an audio task. This function internally creates
+the display list and activates the graphics task.">
+                <Param name="u32 frameNum" />
+                <Param name="u32 y" />
+                <Param name="u32 flag" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuDebTaskPerfBar0EX2" func="yes">
+            <Overload retVal="void" descr="Displays a (type 0) performance barometer for a graphics task
+as well as for an audio task. This function internally sets the
+RDP, creates the display list, and activates the graphics task.">
+                <Param name="u32 frameNum" />
+                <Param name="u32 y" />
+                <Param name="u32 flag" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuDebTaskPerfBar1EX2" func="yes">
+            <Overload retVal="void" descr="Displays a (type 1) performance barometer for a graphics task
+as well as for an audio task. This function internally creates
+the display list and activates the graphics task.">
+                <Param name="u32 frameNum" />
+                <Param name="u32 y" />
+                <Param name="u32 flag" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContPakFileReSize" func="yes">
+            <Overload retVal="" descr="OBSOLETE - Removed">
+                <Param name="" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuContPakFileReSizeJis" func="yes">
+            <Overload retVal="" descr="OBSOLETE - Removed">
+                <Param name="" />
+            </Overload>
+        </KeyWord>
+		
+		<KeyWord name="nuContPakFuncSet" func="yes">
+            <Overload retVal="" descr="OBSOLETE - Removed">
+                <Param name="" />
+            </Overload>
+        </KeyWord>
+		
+		<KeyWord name="nuContPakFuncRemove" func="yes">
+            <Overload retVal="" descr="OBSOLETE - Removed">
+                <Param name="" />
+            </Overload>
+        </KeyWord>
+		
+		<KeyWord name="nuContRmbFuncSet" func="yes">
+            <Overload retVal="" descr="OBSOLETE - Removed">
+                <Param name="" />
+            </Overload>
+        </KeyWord>
+		
+		<KeyWord name="nuContRmbFuncRemove" func="yes">
+            <Overload retVal="" descr="OBSOLETE - Removed">
+                <Param name="" />
+            </Overload>
+        </KeyWord>
+		
+		<KeyWord name="nuAuStlPlayerInit" func="yes">
+            <Overload retVal="" descr="OBSOLETE - Removed">
+                <Param name="" />
+            </Overload>
+        </KeyWord>
+		
+		<KeyWord name="nuAuStlBankSet" func="yes">
+            <Overload retVal="" descr="OBSOLETE - Removed">
+                <Param name="" />
+            </Overload>
+        </KeyWord>
+		
+		<KeyWord name="nuAuStlSeqPlayerSetData" func="yes">
+            <Overload retVal="" descr="OBSOLETE - Removed">
+                <Param name="" />
+            </Overload>
+        </KeyWord>
+		
+        <KeyWord name="nuEepromCheck" func="yes">
+            <Overload retVal="s32" descr="Checks to see if an EEPROM exists, and if so, determines the
+EEPROM type (4K-bit or 16K-bit).">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuEepromMgrInit" func="yes">
+            <Overload retVal="void" descr="Registers the EEPROM Manager in the SI Manager.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuEepromMgrRemove" func="yes">
+            <Overload retVal="void" descr="Deletes the EEPROM Manager from the SI Manager.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuEepromRead" func="yes">
+            <Overload retVal="s32" descr="Reads data from EEPROM.">
+                <Param name="u8 address" />
+                <Param name="u8* buffer" />
+                <Param name="u16 len" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuEepromWrite" func="yes">
+            <Overload retVal="s32" descr="Write data to EEPROM.">
+                <Param name="u8 address" />
+                <Param name="u8* buffer" />
+                <Param name="u16 len" />
+            </Overload>
+        </KeyWord>
+		
+        <KeyWord name="nuGfxDisplayOff" func="yes">
+            <Overload retVal="void" descr="Flag to display or not display a graphic. Set it from your
+application with the nuGfxDisplayOn and nuGfxDisplayOff functions.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuGfxDisplayOn" func="yes">
+            <Overload retVal="void" descr="Flag to display or not display a graphic. Set it from your
+application with the nuGfxDisplayOn and nuGfxDisplayOff functions.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuGfxFuncRemove" func="yes">
+            <Overload retVal="void" descr="Removes the callback function registered in the graphics
+thread. It is a macro of the nuGfxFuncSet function.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuGfxFuncSet" func="yes">
+            <Overload retVal="void" descr="Removes the callback function registered in the graphics
+thread. It is a macro of the nuGfxFuncSet function.">
+                <Param name="NUGfxFunc func" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuGfxInit" func="yes">
+            <Overload retVal="void" descr="Initializes and activates the graphics thread and Graphics
+Task Manager.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuGfxPreNMIFuncRemove" func="yes">
+            <Overload retVal="void" descr="Removes the callback function registered in the graphics
+thread.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuGfxPreNMIFuncSet" func="yes">
+            <Overload retVal="void" descr="Registers in the graphics thread a callback function that is
+executed by a PRE-NMI event message.">
+                <Param name="NUGfxPreNMIFunc func" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuGfxRetraceWait" func="yes">
+            <Overload retVal="void" descr="Waits for the number of retrace events specified by
+retrace_num.">
+                <Param name="u32 retrace_num" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuGfxSetCfb" func="yes">
+            <Overload retVal="void" descr="Pointer to the frame buffer pointer array. Set from your
+application with the nuGfxSetCfb function.">
+                <Param name="u16** framebuf" />
+                <Param name="u32 framebufnum" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuGfxSetUcode" func="yes">
+            <Overload retVal="void" descr="Registers the graphics microcode by entering the graphics
+microcode structure array in the Graphics Task Manager.">
+                <Param name="NUUCode* ucode" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuGfxSetZBuffer" func="yes">
+            <Overload retVal="void" descr="Registers the Z buffer. By default, the nuGfxInit function
+sets the Z buffer at 0x800004000.">
+                <Param name="u16* Zbuffer_ptr" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuGfxSwapCfb" func="yes">
+            <Overload retVal="void" descr="Registers the frame buffer indicated by the next retrace.">
+                <Param name="NUScTask* gfxTask" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuGfxSwapCfbFuncRemove" func="yes">
+            <Overload retVal="void" descr="Removes the callback function executed when a graphics task is
+completed. It is a macro of the nuGfxSwapCfbFuncSet function
+which registered the callback function.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuGfxSwapCfbFuncSet" func="yes">
+            <Overload retVal="void" descr="Removes the callback function executed when a graphics task is
+completed. It is a macro of the nuGfxSwapCfbFuncSet function
+which registered the callback function.">
+                <Param name="NUGfxSwapCfbFunc func" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuGfxTaskAllEndWait" func="yes">
+            <Overload retVal="void" descr="Waits for the end of a graphics task.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuGfxTaskEndFuncRemove" func="yes">
+            <Overload retVal="Argument" descr="Removes the callback function that is executed at the end of
+the graphics task. It is a macro of the nuGfxTaskEndFuncSet
+function, which registered the callback function.">
+                <Param name="" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuGfxTaskEndFuncSet" func="yes">
+            <Overload retVal="void" descr="Removes the callback function that is executed at the end of
+the graphics task. It is a macro of the nuGfxTaskEndFuncSet
+function, which registered the callback function.">
+                <Param name="NUGfxTaskEndFunc func" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuGfxTaskMgrInit" func="yes">
+            <Overload retVal="void" descr="Initializes and activates the Graphics Task Manager. This
+function is called from within nuGfxInit.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuGfxTaskStart" func="yes">
+            <Overload retVal="void" descr="Activates a graphics task.">
+                <Param name="Gfx *gfxList_ptr" />
+                <Param name="u32 gfxListSize" />
+                <Param name="u32 ucode" />
+                <Param name="u32 flag" />
+            </Overload>
+        </KeyWord>
+		
+        <KeyWord name="nuPiInit" func="yes">
+            <Overload retVal="void" descr="Initializes the PI so DMA transfers of data are possible from
+a game Pak that uses the PI.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuPiInitSram" func="yes">
+            <Overload retVal="void" descr="Initialize PI handle for using SRAM.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuPiReadRom" func="yes">
+            <Overload retVal="void" descr="Reads data from ROM. DMA transfers data to RDRAM from a game
+Pak that uses the PI.">
+                <Param name="u32 rom_addr" />
+                <Param name="void* buf_ptr" />
+                <Param name="u32 size" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuPiReadSram" func="yes">
+            <Overload retVal="void" descr="Read data from SRAM (Macro).">
+                <Param name="u32 addr" />
+                <Param name="void* buf_ptr" />
+                <Param name="u32 size" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuPiReadWriteSram" func="yes">
+            <Overload retVal="void" descr="Read/write SRAM data.">
+                <Param name="u32 addr" />
+                <Param name="void* buf_ptr" />
+                <Param name="u32 size" />
+                <Param name="s32 flag" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuPiWriteSram" func="yes">
+            <Overload retVal="void" descr="Write data to SRAM (Macro).">
+                <Param name="u32 addr" />
+                <Param name="void* buf_ptr" />
+                <Param name="u32 size" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuPreNMIFuncRemove" func="yes">
+            <Overload retVal="void" descr="Removes the PRE-NMI event callback function.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuPreNMIFuncSet" func="yes">
+            <Overload retVal="void" descr="Registers the callback function for a PRE-NMI event.">
+                <Param name="NUScPreNMIFunc func" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuScAddClient" func="yes">
+            <Overload retVal="void" descr="Registers Scheduler clients.">
+                <Param name="NUScClient *c" />
+                <Param name="OSMesgQueue *mq" />
+                <Param name="NUScMsg msgType" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuScCreateScheduler" func="yes">
+            <Overload retVal="void" descr="Initializes and activates the Scheduler.">
+                <Param name="u8 videoMode" />
+                <Param name="u8 numFields" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuScGetAudioMQ" func="yes">
+            <Overload retVal="OSMesgQueue*" descr="Gets the pointer to the audio task thread message queue.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuScGetFrameRate" func="yes">
+            <Overload retVal="s32" descr="Get frame rate.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuScGetGfxMQ" func="yes">
+            <Overload retVal="OSMesgQueue*" descr="Gets the pointer to the graphics task thread message queue.">
+                <Param name="void" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuScRemoveClient" func="yes">
+            <Overload retVal="void" descr="Removes the client that has been registered in the Scheduler.">
+                <Param name="NUScClient *c" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuScResetClientMesgType" func="yes">
+            <Overload retVal="void" descr="Change type of message sent to client.">
+                <Param name="NUScClient* c" />
+                <Param name="NUScMsg msgType" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="nuScSetFrameBufferNum" func="yes">
+            <Overload retVal="void" descr="Set the number of frame buffers.">
+                <Param name="u8 frameBufferNum" />
             </Overload>
         </KeyWord>
     </AutoComplete>
