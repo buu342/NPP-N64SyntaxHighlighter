@@ -11,7 +11,8 @@ Lets you see colors on your Notepad++ editor, as well as auto-completion functio
 * Click on Settings -> Preferences -> Auto-Completion, enable both Auto-Completion and Function parameters hints<br/><br/>
 
 ### Configuration
-Edit the XML file inside the notepad++/plugins/config or notepad++/plugins/APIs folder<br/><br/>
+Highlighting - Settings -> Style Configurator -> C (N64), or edit the XML file inside the notepad++/plugins/config folder.
+Autocompletion - Edit the XML file inside the notepad++/plugins/APIs folder<br/><br/>
 
 ### Bugs
 * -- is treated like a comment instead of a subtraction operation
