@@ -33,7 +33,7 @@ Drive.">
         </KeyWord>
 
         <KeyWord name="LeoClearQueue" func="yes">
-            <Overload retVal="s32" descr="Clears the Leo Managerâ€™s command queue.">
+            <Overload retVal="s32" descr="Clears the Leo Manager’s command queue.">
                 <Param name="void" />
             </Overload>
         </KeyWord>
@@ -4569,14 +4569,14 @@ character (a through f, A through F, or 0 through 9).">
         </KeyWord>
 
         <KeyWord name="ldexp" func="yes">
-            <Overload retVal="double" descr="Calculates x*(2Ë†exp) where x is of the double type.">
+            <Overload retVal="double" descr="Calculates x*(2ˆexp) where x is of the double type.">
                 <Param name="double x" />
                 <Param name="int exp" />
             </Overload>
         </KeyWord>
 
         <KeyWord name="ldexpf" func="yes">
-            <Overload retVal="float" descr="Calculates x*(2Ë†exp) where x is of the floating point type.">
+            <Overload retVal="float" descr="Calculates x*(2ˆexp) where x is of the floating point type.">
                 <Param name="float x" />
                 <Param name="int exp" />
             </Overload>
@@ -7950,5 +7950,60 @@ Pak that uses the PI.">
                 <Param name="u8 frameBufferNum" />
             </Overload>
         </KeyWord>
+        
+        <KeyWord name="GPACK_RGBA5551" func="yes">
+            <Overload retVal="void" descr="Convert 8 bit colors to 5 bits.">
+                <Param name="int r" />
+                <Param name="int g" />
+                <Param name="int b" />
+                <Param name="int a" />
+            </Overload>
+        </KeyWord>
+       
+<KeyWord name="gDPLoadTextureTile" func="yes">
+            <Overload retVal="" descr="Loads a subtile of a larger texture image from DRAM to on-chip
+texture memory (TMEM).">
+                <Param name="Gfx *gdl" />
+				<Param name="u32 timg" />
+				<Param name="u32 fmt" />
+				<Param name="u32 siz" />
+				<Param name="u32 width" />
+				<Param name="u32 height" />
+				<Param name="u32 uls" />
+				<Param name="u32 ult" />
+				<Param name="u32 lrs" />
+				<Param name="u32 lrt" />
+				<Param name="u32 pal" />
+				<Param name="u32 cms" />
+				<Param name="u32 cmt" />
+				<Param name="u32 masks" />
+				<Param name="u32 maskt" />
+				<Param name="u32 shifts" />
+				<Param name="u32 shiftt" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="gDPLoadTextureTile_4b" func="yes">
+            <Overload retVal="" descr="Loads a subtile of a larger texture image from DRAM to on-chip
+texture memory (TMEM).">
+                 <Param name="Gfx *gdl" />
+				<Param name="u32 timg" />
+				<Param name="u32 fmt" />
+				<Param name="u32 width" />
+				<Param name="u32 height" />
+				<Param name="u32 uls" />
+				<Param name="u32 ult" />
+				<Param name="u32 lrs" />
+				<Param name="u32 lrt" />
+				<Param name="u32 pal" />
+				<Param name="u32 cms" />
+				<Param name="u32 cmt" />
+				<Param name="u32 masks" />
+				<Param name="u32 maskt" />
+				<Param name="u32 shifts" />
+				<Param name="u32 shiftt" />
+            </Overload>
+        </KeyWord>
+
     </AutoComplete>
 </NotepadPlus>
