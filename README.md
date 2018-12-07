@@ -3,9 +3,9 @@ Provides Syntax Highlighting and Auto-Completion functions for Nintendo 64 C. Fo
 
 ### Installation
 * Download this repository
-* Go to your notepad++ folder
-* Put the dll file, APIs folder and config folder inside the notepad++/plugins folder, replacing if necissary
-* Open notepad++
+* Go to your notepad++ install folder (for exmaple C:\ProgramFiles\Notepad++\)
+* Put the dll file, APIs folder and config folder inside the Notepad++\plugins folder, replacing if necissary
+* Open Notepad++
 * Open a Nintendo 64 C source file
 * Click language -> C (N64)
 * Click on Settings -> Preferences -> Auto-Completion, enable both Auto-Completion and Function parameters hints<br/><br/>
