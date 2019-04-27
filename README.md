@@ -28,9 +28,7 @@ Autocompletion - Edit the XML file inside the notepad++/plugins/APIs folder<br/>
 8. Compile Scintilla, then compile PowerEditor, then compile this syntax highlighter.<br/><br/>
 
 ### Bugs
-Comment Docs do not have code folding
-
-Newlines via the \ character in preprocessor don't instantly refresh colors
+#if and #end macros will not have code folding if there is a space between the hastag and first character (example, # if)
 
 Please notify me about missing functions so that I can add them to the XML file.<br/><br/>
 
