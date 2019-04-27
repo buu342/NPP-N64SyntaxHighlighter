@@ -22,13 +22,13 @@ Autocompletion - Edit the XML file inside the notepad++/plugins/APIs folder<br/>
 4. Place this syntax highlighter's source code in the same folder so it is next to the PowerEditor and Scintilla folders.
 5. Open the project in Visual Studio 8.
 6. Ensure that you are compiling as "Unicode Release".
-7. Compile Scintilla, then compile PowerEditor, then compile this syntax highlighter.
+7. Compile Scintilla, then compile PowerEditor, then compile this syntax highlighter.<br/><br/>
 
 ### Bugs
 None as far as I am aware.
 
-Please notify me about missing functions so that I can add them to the XML file
-<br/><br/>
+Please notify me about missing functions so that I can add them to the XML file<br/><br/>
+
 ### FAQ
 **Q:** Function 'X' is missing or has something wrong.<br/>
 **A:** You can correct it by editing the XML file, but please contact me too so I can correct it for everyone else!<br/><br/>
