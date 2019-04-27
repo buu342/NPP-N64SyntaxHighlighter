@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GmodLua", "vcbuild.vcproj", "{4570DA81-D482-4BDB-B4AC-3866D0D49B04}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4795D021-B6FF-4B9C-9FC5-507B2AF373D4} = {4795D021-B6FF-4B9C-9FC5-507B2AF373D4}
+		{FCF60E65-1B78-4D1D-AB59-4FC00AC8C248} = {FCF60E65-1B78-4D1D-AB59-4FC00AC8C248}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Notepad++", "..\..\PowerEditor\visual.net\notepadPlus.vcproj", "{FCF60E65-1B78-4D1D-AB59-4FC00AC8C248}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4795D021-B6FF-4B9C-9FC5-507B2AF373D4} = {4795D021-B6FF-4B9C-9FC5-507B2AF373D4}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SciLexer", "..\..\scintilla\vcbuild\SciLexer.vcproj", "{4795D021-B6FF-4B9C-9FC5-507B2AF373D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		ANSI Debug|Win32 = ANSI Debug|Win32
+		ANSI Release|Win32 = ANSI Release|Win32
+		Unicode Debug|Win32 = Unicode Debug|Win32
+		Unicode Release|Win32 = Unicode Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4570DA81-D482-4BDB-B4AC-3866D0D49B04}.ANSI Debug|Win32.ActiveCfg = ANSI Debug|Win32
+		{4570DA81-D482-4BDB-B4AC-3866D0D49B04}.ANSI Debug|Win32.Build.0 = ANSI Debug|Win32
+		{4570DA81-D482-4BDB-B4AC-3866D0D49B04}.ANSI Release|Win32.ActiveCfg = ANSI Release|Win32
+		{4570DA81-D482-4BDB-B4AC-3866D0D49B04}.ANSI Release|Win32.Build.0 = ANSI Release|Win32
+		{4570DA81-D482-4BDB-B4AC-3866D0D49B04}.Unicode Debug|Win32.ActiveCfg = Unicode Debug|Win32
+		{4570DA81-D482-4BDB-B4AC-3866D0D49B04}.Unicode Debug|Win32.Build.0 = Unicode Debug|Win32
+		{4570DA81-D482-4BDB-B4AC-3866D0D49B04}.Unicode Release|Win32.ActiveCfg = Unicode Release|Win32
+		{4570DA81-D482-4BDB-B4AC-3866D0D49B04}.Unicode Release|Win32.Build.0 = Unicode Release|Win32
+		{FCF60E65-1B78-4D1D-AB59-4FC00AC8C248}.ANSI Debug|Win32.ActiveCfg = ANSI Debug|Win32
+		{FCF60E65-1B78-4D1D-AB59-4FC00AC8C248}.ANSI Debug|Win32.Build.0 = ANSI Debug|Win32
+		{FCF60E65-1B78-4D1D-AB59-4FC00AC8C248}.ANSI Release|Win32.ActiveCfg = ANSI Release|Win32
+		{FCF60E65-1B78-4D1D-AB59-4FC00AC8C248}.ANSI Release|Win32.Build.0 = ANSI Release|Win32
+		{FCF60E65-1B78-4D1D-AB59-4FC00AC8C248}.Unicode Debug|Win32.ActiveCfg = Unicode Debug|Win32
+		{FCF60E65-1B78-4D1D-AB59-4FC00AC8C248}.Unicode Debug|Win32.Build.0 = Unicode Debug|Win32
+		{FCF60E65-1B78-4D1D-AB59-4FC00AC8C248}.Unicode Release|Win32.ActiveCfg = Unicode Release|Win32
+		{FCF60E65-1B78-4D1D-AB59-4FC00AC8C248}.Unicode Release|Win32.Build.0 = Unicode Release|Win32
+		{4795D021-B6FF-4B9C-9FC5-507B2AF373D4}.ANSI Debug|Win32.ActiveCfg = Debug|Win32
+		{4795D021-B6FF-4B9C-9FC5-507B2AF373D4}.ANSI Debug|Win32.Build.0 = Debug|Win32
+		{4795D021-B6FF-4B9C-9FC5-507B2AF373D4}.ANSI Release|Win32.ActiveCfg = Release|Win32
+		{4795D021-B6FF-4B9C-9FC5-507B2AF373D4}.ANSI Release|Win32.Build.0 = Release|Win32
+		{4795D021-B6FF-4B9C-9FC5-507B2AF373D4}.Unicode Debug|Win32.ActiveCfg = Debug|Win32
+		{4795D021-B6FF-4B9C-9FC5-507B2AF373D4}.Unicode Debug|Win32.Build.0 = Debug|Win32
+		{4795D021-B6FF-4B9C-9FC5-507B2AF373D4}.Unicode Release|Win32.ActiveCfg = Release|Win32
+		{4795D021-B6FF-4B9C-9FC5-507B2AF373D4}.Unicode Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
