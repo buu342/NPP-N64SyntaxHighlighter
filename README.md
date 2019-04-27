@@ -2,17 +2,18 @@
 Provides Syntax Highlighting and Auto-Completion functions for Nintendo 64 C. For use with Notepad++.<br/><br/>
 
 ### Installation
-Please be aware that newer versions of Notepad++ require some extra steps to get plugins to work. I'll update this readme once those steps are clear enough.
 * Download this repository
 * Go to your notepad++ install folder (for exmaple C:\ProgramFiles\Notepad++\)
-* Put the dll file, APIs folder and config folder inside the Notepad++\plugins folder, replacing if necissary
+* Place the APIs folder inside the Notepad++\plugins folder
+* If you are using a version of Notepad++ LOWER than 7.6, place the .dll and Config folder in here as well. 
+* If you are using Notepad++ 7.6 or higher go to C:\Programdata\Notepad++\plugins and create a new folder called N64C and place the .dll in there. Then go to C:\Users\YOURUSERNAME\AppData\Roaming\Notepad++\plugins\ and place the config folder in here, overwriting if necessary.
 * Open Notepad++
 * Open a Nintendo 64 C source file
 * Click language -> C (N64)
 * Click on Settings -> Preferences -> Auto-Completion, enable both Auto-Completion and Function parameters hints<br/><br/>
 
 ### Configuration
-Highlighting - Settings -> Style Configurator -> C (N64), or edit the XML file inside the notepad++/plugins/config folder.
+Highlighting - Settings -> Style Configurator -> C (N64), or edit the XML file inside the config folder.
 Autocompletion - Edit the XML file inside the notepad++/plugins/APIs folder<br/><br/>
 
 ### How to compile the source code
