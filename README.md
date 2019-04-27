@@ -14,6 +14,7 @@ Provides Syntax Highlighting and Auto-Completion functions for Nintendo 64 C. Fo
 
 ### Configuration
 Highlighting - Settings -> Style Configurator -> C (N64), or edit the XML file inside the config folder.
+
 Autocompletion - Edit the XML file inside the notepad++/plugins/APIs folder<br/><br/>
 
 ### How to compile the source code
