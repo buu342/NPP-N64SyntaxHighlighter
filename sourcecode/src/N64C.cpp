@@ -82,7 +82,7 @@ LexerFactoryFunction EXT_LEXER_DECL GetLexerFactory(unsigned int index) {
 void N64C::aboutDlg()
 {
 	::MessageBox(nppData._nppHandle,
-		TEXT("Nintendo 64 C Syntax Highlighter 1.2\n")
+		TEXT("Nintendo 64 C Syntax Highlighter 1.3\n")
 		TEXT("https://github.com/buu342/N64-SyntaxHighlighter\n\n"),
 		TEXT("About"),
 		MB_OK);
@@ -167,7 +167,7 @@ void N64C::Colourise_Doc(unsigned int startPos, int length, int initStyle, WordL
 	}
 
 	// Do not leak onto next line
-	if (initStyle == STRINGEOL || initStyle == PREPROCESSOR || initStyle == COMMENTLINE) {
+	if (initStyle == STRINGEOL || initStyle == COMMENTLINE || initStyle == PREPROCEOL ) {
 		initStyle = DEFAULT;
 	}
 
@@ -180,7 +180,7 @@ void N64C::Colourise_Doc(unsigned int startPos, int length, int initStyle, WordL
 		}
 
 		// Handle string line continuation
-		if ((sc.state == STRING || sc.state == CHARACTER) &&
+		if ((sc.state == STRING || sc.state == CHARACTER || sc.state == PREPROCESSOR) &&
 				sc.ch == '\\') {
 			if (sc.chNext == '\n' || sc.chNext == '\r') {
 				sc.Forward();
@@ -223,7 +223,14 @@ void N64C::Colourise_Doc(unsigned int startPos, int length, int initStyle, WordL
 				sc.SetState(DEFAULT);
 			}
 		} else if (sc.state == PREPROCESSOR) {
-			if (sc.atLineEnd && styler.SafeGetCharAt(sc.currentPos-2) != '\\' ) { 
+			if (sc.ch == '\\') {
+				if (sc.chNext == '\n' || sc.chNext == '\r' || sc.chNext == '\\') {
+					sc.Forward();
+				}
+			} else if (sc.ch == '\n' || sc.ch == '\r') {
+				sc.ForwardSetState(DEFAULT);
+			} else if (sc.atLineEnd) {
+				sc.ChangeState(PREPROCEOL);
 				sc.ForwardSetState(DEFAULT);
 			}
 		} else if (sc.state == COMMENTLINE) {
@@ -430,11 +437,11 @@ void N64C::Fold_Doc(unsigned int startPos, int length, int initStyle, Accessor &
 				levelNext--;
 			}
 		} else if ((style == COMMENTBLOCK || style == COMMENTDOC) &&
-				!(stylePrev == COMMENTBLOCK || style == COMMENTDOC) &&
+				!(stylePrev == COMMENTBLOCK || stylePrev == COMMENTDOC) &&
 				(ch == '/')) {
 			levelNext++;
 		} else if ((style == COMMENTBLOCK || style == COMMENTDOC) &&
-				!(styleNext == COMMENTBLOCK || style == COMMENTDOC) &&
+				!(styleNext == COMMENTBLOCK || styleNext == COMMENTDOC) &&
 				(ch == '/')) {
 			levelNext--;
 		} else if (style == COMMENTLINE) {

@@ -41,7 +41,7 @@ namespace N64C
 	const int PREPROCESSOR = 1;
 	const int COMMENTBLOCK = 2;
 	const int COMMENTLINE = 3;
-	const int COMMENTDOC = 4; // TODO: Implement this ( /** )
+	const int COMMENTDOC = 4;
 
 	const int NUMBER = 5;
 	const int OPERATOR = 6;
@@ -50,6 +50,7 @@ namespace N64C
 	const int STRING = 7;
 	const int CHARACTER = 8;
 	const int STRINGEOL = 10;
+	const int PREPROCEOL = 11;
 
 	const int WORD0 = 20;
 	const int WORD1 = 21;
