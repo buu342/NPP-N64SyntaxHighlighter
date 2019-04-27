@@ -22,9 +22,10 @@ Autocompletion - Edit the XML file inside the notepad++/plugins/APIs folder<br/>
 2. Download a copy of [Notepad++ 5.8's source code](https://notepad-plus-plus.org/download/v5.8.html).
 3. Place the NP++ Source code in a folder. 
 4. Place this syntax highlighter's source code in the same folder so it is next to the PowerEditor and Scintilla folders.
-5. Open the project in Visual Studio 8.
-6. Ensure that you are compiling as "Unicode Release".
-7. Compile Scintilla, then compile PowerEditor, then compile this syntax highlighter.<br/><br/>
+5. Rename the sourcecode folder to N64C
+6. Open the project in Visual Studio 8.
+7. Ensure that you are compiling as "Unicode Release".
+8. Compile Scintilla, then compile PowerEditor, then compile this syntax highlighter.<br/><br/>
 
 ### Bugs
 Multiline Preprocessor commands (through the use of the \ character) do not color properly.
