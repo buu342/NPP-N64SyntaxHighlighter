@@ -15,8 +15,7 @@ Highlighting - Settings -> Style Configurator -> C (N64), or edit the XML file i
 Autocompletion - Edit the XML file inside the notepad++/plugins/APIs folder<br/><br/>
 
 ### Bugs
-* -- is treated like a comment instead of a subtraction operation
-* #'s are not properly colored<br/>
+None as far as I am aware.
 
 Please notify me about missing functions so that I can add them to the XML file
 <br/><br/>
