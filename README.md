@@ -30,7 +30,9 @@ Autocompletion - Edit the XML file inside the notepad++/plugins/APIs folder<br/>
 ### Bugs
 Multiline Preprocessor commands (through the use of the \ character) do not color properly.
 
-Please notify me about missing functions so that I can add them to the XML file<br/><br/>
+CommentDoc lines have not been implemented.
+
+Please notify me about missing functions so that I can add them to the XML file.<br/><br/>
 
 ### FAQ
 **Q:** Function 'X' is missing or has something wrong.<br/>
