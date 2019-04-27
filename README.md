@@ -26,7 +26,7 @@ Autocompletion - Edit the XML file inside the notepad++/plugins/APIs folder<br/>
 7. Compile Scintilla, then compile PowerEditor, then compile this syntax highlighter.<br/><br/>
 
 ### Bugs
-None as far as I am aware.
+Multiline Preprocessor commands (through the use of the \ character) do not color properly.
 
 Please notify me about missing functions so that I can add them to the XML file<br/><br/>
 
