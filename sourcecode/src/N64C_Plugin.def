@@ -1,0 +1,10 @@
+LIBRARY	"N64C"
+
+EXPORTS
+	GetLexerCount = GetLexerCount
+	GetLexerName = GetLexerName
+	GetLexerStatusText = GetLexerStatusText
+	GetLexerFactory = GetLexerFactory
+	; Legacy
+	Lex = NppLex
+	Fold = NppFold
