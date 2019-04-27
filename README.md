@@ -14,6 +14,15 @@ Provides Syntax Highlighting and Auto-Completion functions for Nintendo 64 C. Fo
 Highlighting - Settings -> Style Configurator -> C (N64), or edit the XML file inside the notepad++/plugins/config folder.
 Autocompletion - Edit the XML file inside the notepad++/plugins/APIs folder<br/><br/>
 
+### How to compile the source code
+1. Download and install a copy of [Visual Studio 2008](https://www.microsoft.com/en-us/download/details.aspx?id=7873).
+2. Download a copy of [Notepad++ 5.8's source code](https://notepad-plus-plus.org/download/v5.8.html).
+3. Place the NP++ Source code in a folder. 
+4. Place this syntax highlighter's source code in the same folder so it is next to the PowerEditor and Scintilla folders.
+5. Open the project in Visual Studio 8.
+6. Ensure that you are compiling as "Unicode Release".
+7. Compile Scintilla, then compile PowerEditor, then compile this syntax highlighter.
+
 ### Bugs
 None as far as I am aware.
 
