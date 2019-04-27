@@ -2,6 +2,7 @@
 Provides Syntax Highlighting and Auto-Completion functions for Nintendo 64 C. For use with Notepad++.<br/><br/>
 
 ### Installation
+Please be aware that newer versions of Notepad++ require some extra steps to get plugins to work. I'll update this readme once those steps are clear enough.
 * Download this repository
 * Go to your notepad++ install folder (for exmaple C:\ProgramFiles\Notepad++\)
 * Put the dll file, APIs folder and config folder inside the Notepad++\plugins folder, replacing if necissary
