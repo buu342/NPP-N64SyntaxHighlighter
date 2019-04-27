@@ -39,16 +39,17 @@ namespace N64C
 	const int DEFAULT = 0;
 
 	const int PREPROCESSOR = 1;
-	const int C_COMMENTBLOCK = 2;
-	const int C_COMMENTLINE = 3;
+	const int COMMENTBLOCK = 2;
+	const int COMMENTLINE = 3;
+	const int COMMENTDOC = 4; // TODO: Implement this ( /** )
 
-	const int NUMBER = 4;
-	const int OPERATOR = 5;
-	const int IDENTIFIER = 6;
+	const int NUMBER = 5;
+	const int OPERATOR = 6;
+	const int IDENTIFIER = 9;
 
 	const int STRING = 7;
 	const int CHARACTER = 8;
-	const int STRINGEOL = 9;
+	const int STRINGEOL = 10;
 
 	const int WORD0 = 20;
 	const int WORD1 = 21;

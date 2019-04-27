@@ -82,7 +82,7 @@ LexerFactoryFunction EXT_LEXER_DECL GetLexerFactory(unsigned int index) {
 void N64C::aboutDlg()
 {
 	::MessageBox(nppData._nppHandle,
-		TEXT("Nintendo 64 C Syntax Highlighter 1.1\n")
+		TEXT("Nintendo 64 C Syntax Highlighter 1.2\n")
 		TEXT("https://github.com/buu342/N64-SyntaxHighlighter\n\n"),
 		TEXT("About"),
 		MB_OK);
@@ -167,7 +167,7 @@ void N64C::Colourise_Doc(unsigned int startPos, int length, int initStyle, WordL
 	}
 
 	// Do not leak onto next line
-	if (initStyle == STRINGEOL || initStyle == PREPROCESSOR || initStyle == C_COMMENTLINE) {
+	if (initStyle == STRINGEOL || initStyle == PREPROCESSOR || initStyle == COMMENTLINE) {
 		initStyle = DEFAULT;
 	}
 
@@ -223,10 +223,10 @@ void N64C::Colourise_Doc(unsigned int startPos, int length, int initStyle, WordL
 				sc.SetState(DEFAULT);
 			}
 		} else if (sc.state == PREPROCESSOR) {
-			if (sc.atLineEnd) {
+			if (sc.atLineEnd && styler.SafeGetCharAt(sc.currentPos-2) != '\\' ) { 
 				sc.ForwardSetState(DEFAULT);
 			}
-		} else if (sc.state == C_COMMENTLINE) {
+		} else if (sc.state == COMMENTLINE) {
 			if (sc.atLineEnd) {
 				sc.ForwardSetState(DEFAULT);
 			}
@@ -252,7 +252,7 @@ void N64C::Colourise_Doc(unsigned int startPos, int length, int initStyle, WordL
 				sc.ChangeState(STRINGEOL);
 				sc.ForwardSetState(DEFAULT);
 			}
-		} else if (sc.state == C_COMMENTBLOCK) {
+		} else if (sc.state == COMMENTBLOCK || sc.state == COMMENTDOC) {
 			if (sc.Match('*', '/')) {
 				sc.Forward();
 				sc.ForwardSetState(DEFAULT);
@@ -363,10 +363,13 @@ void N64C::Colourise_Doc(unsigned int startPos, int length, int initStyle, WordL
 				} else if (sc.ch == '\'') {
 					sc.SetState(CHARACTER);
 				} else if (sc.Match('/', '/')) {
-					sc.SetState(C_COMMENTLINE);
+					sc.SetState(COMMENTLINE);
+					sc.Forward();
+				} else if (sc.Match("/**")) {
+					sc.SetState(COMMENTDOC);
 					sc.Forward();
 				} else if (sc.Match('/', '*')) {
-					sc.SetState(C_COMMENTBLOCK);
+					sc.SetState(COMMENTBLOCK);
 					sc.Forward();
 				} else if (sc.Match('#')) {
 					sc.SetState(PREPROCESSOR);
@@ -375,10 +378,13 @@ void N64C::Colourise_Doc(unsigned int startPos, int length, int initStyle, WordL
 					sc.SetState(OPERATOR);
 				}
 			} else if (sc.Match('/', '/')) {
-				sc.SetState(C_COMMENTLINE);
+				sc.SetState(COMMENTLINE);
+				sc.Forward();
+			} else if (sc.Match("/**")) {
+				sc.SetState(COMMENTDOC);
 				sc.Forward();
 			} else if (sc.Match('/', '*')) {
-				sc.SetState(C_COMMENTBLOCK);
+				sc.SetState(COMMENTBLOCK);
 				sc.Forward();
 			}
 		}
@@ -423,15 +429,15 @@ void N64C::Fold_Doc(unsigned int startPos, int length, int initStyle, Accessor &
 			} else if (ch == '}'){
 				levelNext--;
 			}
-		} else if ((style == C_COMMENTBLOCK) &&
-				!(stylePrev == C_COMMENTBLOCK) &&
+		} else if ((style == COMMENTBLOCK || style == COMMENTDOC) &&
+				!(stylePrev == COMMENTBLOCK || style == COMMENTDOC) &&
 				(ch == '/')) {
 			levelNext++;
-		} else if ((style == C_COMMENTBLOCK) &&
-				!(styleNext == C_COMMENTBLOCK) &&
+		} else if ((style == COMMENTBLOCK || style == COMMENTDOC) &&
+				!(styleNext == COMMENTBLOCK || style == COMMENTDOC) &&
 				(ch == '/')) {
 			levelNext--;
-		} else if (style == C_COMMENTLINE) {
+		} else if (style == COMMENTLINE) {
 			if ((ch == '/' && chNext == '/')) {
 				char chNext2 = styler.SafeGetCharAt(i + 2);
 				if (chNext2 == '{') {
@@ -454,8 +460,4 @@ void N64C::Fold_Doc(unsigned int startPos, int length, int initStyle, Accessor &
 			levelCurrent = levelNext;
 		}
 	}
-	//char lastChar = styler.SafeGetCharAt(lengthDoc-1);
-	//if ((unsigned)styler.Length() == lengthDoc && (lastChar == '\n' || lastChar == '\r')) {
-	//	styler.SetLevel(lineCurrent, levelCurrent);
-	//}
 }
