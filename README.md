@@ -30,6 +30,7 @@ Autocompletion - Edit the XML file inside the notepad++/plugins/APIs folder<br/>
 
 ### Bugs
 #if and #end macros will not have code folding if there is a space between the hastag and first character (example, # if)
+
 The F in a floating point number is not highlighted (example, 10.0F)
 
 Please notify me about missing functions so that I can add them to the XML file.<br/><br/>
