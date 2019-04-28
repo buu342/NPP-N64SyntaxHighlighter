@@ -1,5 +1,6 @@
 # Nintendo 64 C Notepad++ Syntax Highlighter
-Provides Syntax Highlighting and Auto-Completion functions for Nintendo 64 C. For use with Notepad++.<br/><br/>
+Provides Syntax Highlighting and Auto-Completion functions for Nintendo 64 C. For use with Notepad++.
+![Screenshot](https://i.imgur.com/fZ1lWGY.png)<br/><br/>
 
 ### Installation
 * Download this repository
