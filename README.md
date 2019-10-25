@@ -7,7 +7,8 @@ Provides Syntax Highlighting and Auto-Completion functions for Nintendo 64 C. Fo
 * Go to your notepad++ install folder (for exmaple C:\Program Files\Notepad++\)
 * Place the APIs folder inside the Notepad++\plugins folder
 * If you are using a version of Notepad++ LOWER than 7.6, place the .dll and Config folder in here as well. 
-* If you are using Notepad++ 7.6 or higher go to C:\Programdata\Notepad++\plugins and create a new folder called N64C and place the .dll in there. Then go to C:\Users\YOURUSERNAME\AppData\Roaming\Notepad++\plugins\ and place the config folder in here, overwriting if necessary.
+* If you are using Notepad++ 7.6, go to C:\Programdata\Notepad++\plugins and create a new folder called N64C and place the .dll in there. Then go to C:\Users\YOURUSERNAME\AppData\Roaming\Notepad++\plugins\ and place the config folder in here, overwriting if necessary.
+* If you are using Notepad++ 7.7 or higher, I'm sorry but this plugin does not work anymore as new versions of NP++ use a newer version of Scintilla. I have been unable to compile my plugin since then.
 * Open Notepad++
 * Open a Nintendo 64 C source file
 * Click language -> C (N64)
