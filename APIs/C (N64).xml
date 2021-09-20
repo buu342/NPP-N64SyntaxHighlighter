@@ -2618,7 +2618,15 @@ like mip-mapping, detail, and sharpen.">
             </Overload>
         </KeyWord>
         
-        <KeyWord name="gdSPDefLights" func="yes">
+        <KeyWord name="gdSPDefLights0" func="yes">
+            <Overload retVal="LightsM" descr="Loads parameters defining the lights into light structures.">
+                <Param name="unsigned char ar" />
+				<Param name="unsigned char ag" />
+				<Param name="unsigned char ab" />
+            </Overload>
+        </KeyWord>
+        
+        <KeyWord name="gdSPDefLights1" func="yes">
             <Overload retVal="LightsM" descr="Loads parameters defining the lights into light structures.">
                 <Param name="unsigned char ar" />
 				<Param name="unsigned char ag" />
@@ -2629,15 +2637,219 @@ like mip-mapping, detail, and sharpen.">
 				<Param name="unsigned char n1x" />
 				<Param name="unsigned char n1y" />
 				<Param name="unsigned char n1z" />
-				<Param name="unsigned char dMr" />
-				<Param name="unsigned char dMg" />
-				<Param name="unsigned char dMb" />
-				<Param name="unsigned char nMx" />
-				<Param name="unsigned char nMy" />
-				<Param name="unsigned char nMz" />
             </Overload>
         </KeyWord>
 
+        <KeyWord name="gdSPDefLights2" func="yes">
+            <Overload retVal="LightsM" descr="Loads parameters defining the lights into light structures.">
+                <Param name="unsigned char ar" />
+				<Param name="unsigned char ag" />
+				<Param name="unsigned char ab" />
+				<Param name="unsigned char d1r" />
+				<Param name="unsigned char d1g" />
+				<Param name="unsigned char d1b" />
+				<Param name="unsigned char n1x" />
+				<Param name="unsigned char n1y" />
+				<Param name="unsigned char n1z" />
+				<Param name="unsigned char d2r" />
+				<Param name="unsigned char d2g" />
+				<Param name="unsigned char d2b" />
+				<Param name="unsigned char n2x" />
+				<Param name="unsigned char n2y" />
+				<Param name="unsigned char n2z" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="gdSPDefLights3" func="yes">
+            <Overload retVal="LightsM" descr="Loads parameters defining the lights into light structures.">
+                <Param name="unsigned char ar" />
+				<Param name="unsigned char ag" />
+				<Param name="unsigned char ab" />
+				<Param name="unsigned char d1r" />
+				<Param name="unsigned char d1g" />
+				<Param name="unsigned char d1b" />
+				<Param name="unsigned char n1x" />
+				<Param name="unsigned char n1y" />
+				<Param name="unsigned char n1z" />
+				<Param name="unsigned char d2r" />
+				<Param name="unsigned char d2g" />
+				<Param name="unsigned char d2b" />
+				<Param name="unsigned char n2x" />
+				<Param name="unsigned char n2y" />
+				<Param name="unsigned char n2z" />
+				<Param name="unsigned char d3r" />
+				<Param name="unsigned char d3g" />
+				<Param name="unsigned char d3b" />
+				<Param name="unsigned char n3x" />
+				<Param name="unsigned char n3y" />
+				<Param name="unsigned char n3z" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="gdSPDefLights4" func="yes">
+            <Overload retVal="LightsM" descr="Loads parameters defining the lights into light structures.">
+                <Param name="unsigned char ar" />
+				<Param name="unsigned char ag" />
+				<Param name="unsigned char ab" />
+				<Param name="unsigned char d1r" />
+				<Param name="unsigned char d1g" />
+				<Param name="unsigned char d1b" />
+				<Param name="unsigned char n1x" />
+				<Param name="unsigned char n1y" />
+				<Param name="unsigned char n1z" />
+				<Param name="unsigned char d2r" />
+				<Param name="unsigned char d2g" />
+				<Param name="unsigned char d2b" />
+				<Param name="unsigned char n2x" />
+				<Param name="unsigned char n2y" />
+				<Param name="unsigned char n2z" />
+				<Param name="unsigned char d3r" />
+				<Param name="unsigned char d3g" />
+				<Param name="unsigned char d3b" />
+				<Param name="unsigned char n3x" />
+				<Param name="unsigned char n3y" />
+				<Param name="unsigned char n3z" />
+				<Param name="unsigned char d4r" />
+				<Param name="unsigned char d4g" />
+				<Param name="unsigned char d4b" />
+				<Param name="unsigned char n4x" />
+				<Param name="unsigned char n4y" />
+				<Param name="unsigned char n4z" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="gdSPDefLights5" func="yes">
+            <Overload retVal="LightsM" descr="Loads parameters defining the lights into light structures.">
+                <Param name="unsigned char ar" />
+				<Param name="unsigned char ag" />
+				<Param name="unsigned char ab" />
+				<Param name="unsigned char d1r" />
+				<Param name="unsigned char d1g" />
+				<Param name="unsigned char d1b" />
+				<Param name="unsigned char n1x" />
+				<Param name="unsigned char n1y" />
+				<Param name="unsigned char n1z" />
+				<Param name="unsigned char d2r" />
+				<Param name="unsigned char d2g" />
+				<Param name="unsigned char d2b" />
+				<Param name="unsigned char n2x" />
+				<Param name="unsigned char n2y" />
+				<Param name="unsigned char n2z" />
+				<Param name="unsigned char d3r" />
+				<Param name="unsigned char d3g" />
+				<Param name="unsigned char d3b" />
+				<Param name="unsigned char n3x" />
+				<Param name="unsigned char n3y" />
+				<Param name="unsigned char n3z" />
+				<Param name="unsigned char d4r" />
+				<Param name="unsigned char d4g" />
+				<Param name="unsigned char d4b" />
+				<Param name="unsigned char n4x" />
+				<Param name="unsigned char n4y" />
+				<Param name="unsigned char n4z" />
+				<Param name="unsigned char d5r" />
+				<Param name="unsigned char d5g" />
+				<Param name="unsigned char d5b" />
+				<Param name="unsigned char n5x" />
+				<Param name="unsigned char n5y" />
+				<Param name="unsigned char n5z" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="gdSPDefLights6" func="yes">
+            <Overload retVal="LightsM" descr="Loads parameters defining the lights into light structures.">
+                <Param name="unsigned char ar" />
+				<Param name="unsigned char ag" />
+				<Param name="unsigned char ab" />
+				<Param name="unsigned char d1r" />
+				<Param name="unsigned char d1g" />
+				<Param name="unsigned char d1b" />
+				<Param name="unsigned char n1x" />
+				<Param name="unsigned char n1y" />
+				<Param name="unsigned char n1z" />
+				<Param name="unsigned char d2r" />
+				<Param name="unsigned char d2g" />
+				<Param name="unsigned char d2b" />
+				<Param name="unsigned char n2x" />
+				<Param name="unsigned char n2y" />
+				<Param name="unsigned char n2z" />
+				<Param name="unsigned char d3r" />
+				<Param name="unsigned char d3g" />
+				<Param name="unsigned char d3b" />
+				<Param name="unsigned char n3x" />
+				<Param name="unsigned char n3y" />
+				<Param name="unsigned char n3z" />
+				<Param name="unsigned char d4r" />
+				<Param name="unsigned char d4g" />
+				<Param name="unsigned char d4b" />
+				<Param name="unsigned char n4x" />
+				<Param name="unsigned char n4y" />
+				<Param name="unsigned char n4z" />
+				<Param name="unsigned char d5r" />
+				<Param name="unsigned char d5g" />
+				<Param name="unsigned char d5b" />
+				<Param name="unsigned char n5x" />
+				<Param name="unsigned char n5y" />
+				<Param name="unsigned char n5z" />
+				<Param name="unsigned char d6r" />
+				<Param name="unsigned char d6g" />
+				<Param name="unsigned char d6b" />
+				<Param name="unsigned char n6x" />
+				<Param name="unsigned char n6y" />
+				<Param name="unsigned char n6z" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="gdSPDefLights7" func="yes">
+            <Overload retVal="LightsM" descr="Loads parameters defining the lights into light structures.">
+                <Param name="unsigned char ar" />
+				<Param name="unsigned char ag" />
+				<Param name="unsigned char ab" />
+				<Param name="unsigned char d1r" />
+				<Param name="unsigned char d1g" />
+				<Param name="unsigned char d1b" />
+				<Param name="unsigned char n1x" />
+				<Param name="unsigned char n1y" />
+				<Param name="unsigned char n1z" />
+				<Param name="unsigned char d2r" />
+				<Param name="unsigned char d2g" />
+				<Param name="unsigned char d2b" />
+				<Param name="unsigned char n2x" />
+				<Param name="unsigned char n2y" />
+				<Param name="unsigned char n2z" />
+				<Param name="unsigned char d3r" />
+				<Param name="unsigned char d3g" />
+				<Param name="unsigned char d3b" />
+				<Param name="unsigned char n3x" />
+				<Param name="unsigned char n3y" />
+				<Param name="unsigned char n3z" />
+				<Param name="unsigned char d4r" />
+				<Param name="unsigned char d4g" />
+				<Param name="unsigned char d4b" />
+				<Param name="unsigned char n4x" />
+				<Param name="unsigned char n4y" />
+				<Param name="unsigned char n4z" />
+				<Param name="unsigned char d5r" />
+				<Param name="unsigned char d5g" />
+				<Param name="unsigned char d5b" />
+				<Param name="unsigned char n5x" />
+				<Param name="unsigned char n5y" />
+				<Param name="unsigned char n5z" />
+				<Param name="unsigned char d6r" />
+				<Param name="unsigned char d6g" />
+				<Param name="unsigned char d6b" />
+				<Param name="unsigned char n6x" />
+				<Param name="unsigned char n6y" />
+				<Param name="unsigned char n6z" />
+				<Param name="unsigned char d7r" />
+				<Param name="unsigned char d7g" />
+				<Param name="unsigned char d7b" />
+				<Param name="unsigned char n7x" />
+				<Param name="unsigned char n7y" />
+				<Param name="unsigned char n7z" />
+            </Overload>
+        </KeyWord>
+        
         <KeyWord name="gdSPDefLookAt" func="yes">
             <Overload retVal="LookAt" descr="Loads the x and y screen space coordinate directions into a
 LookAt structure.">
@@ -3064,14 +3276,7 @@ depending on the True/False result, it calls other display lists.">
             </Overload>
         </KeyWord>
 
-        <KeyWord name="gSPSetLights" func="yes">
-            <Overload retVal="" descr="Loads light structures into the RSP.">
-                <Param name="Gfx *gdl" />
-                <Param name="LightsM lites" />
-            </Overload>
-        </KeyWord>
-
-        <KeyWord name="gSPSetLightsM" func="yes">
+        <KeyWord name="gSPSetLights0" func="yes">
             <Overload retVal="" descr="Loads light structures for ambient and diffuse lights into the
 light buffer. ">
                 <Param name="Gfx *gdl" />
@@ -3079,6 +3284,62 @@ light buffer. ">
             </Overload>
         </KeyWord>
 
+        <KeyWord name="gSPSetLights1" func="yes">
+            <Overload retVal="" descr="Loads light structures for ambient and diffuse lights into the
+light buffer. ">
+                <Param name="Gfx *gdl" />
+				<Param name="LightsM lites" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="gSPSetLights2" func="yes">
+            <Overload retVal="" descr="Loads light structures for ambient and diffuse lights into the
+light buffer. ">
+                <Param name="Gfx *gdl" />
+				<Param name="LightsM lites" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="gSPSetLights3" func="yes">
+            <Overload retVal="" descr="Loads light structures for ambient and diffuse lights into the
+light buffer. ">
+                <Param name="Gfx *gdl" />
+				<Param name="LightsM lites" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="gSPSetLights4" func="yes">
+            <Overload retVal="" descr="Loads light structures for ambient and diffuse lights into the
+light buffer. ">
+                <Param name="Gfx *gdl" />
+				<Param name="LightsM lites" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="gSPSetLights5" func="yes">
+            <Overload retVal="" descr="Loads light structures for ambient and diffuse lights into the
+light buffer. ">
+                <Param name="Gfx *gdl" />
+				<Param name="LightsM lites" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="gSPSetLights6" func="yes">
+            <Overload retVal="" descr="Loads light structures for ambient and diffuse lights into the
+light buffer. ">
+                <Param name="Gfx *gdl" />
+				<Param name="LightsM lites" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="gSPSetLights7" func="yes">
+            <Overload retVal="" descr="Loads light structures for ambient and diffuse lights into the
+light buffer. ">
+                <Param name="Gfx *gdl" />
+				<Param name="LightsM lites" />
+            </Overload>
+        </KeyWord>
+        
         <KeyWord name="gSPSetOtherMode" func="yes">
             <Overload retVal="" descr="Sets or clears the RDP 'othermode' but it is not exposed to
 the programmer and should not be used.">
@@ -3551,13 +3812,56 @@ depending on the True/False result, it calls other display lists.">
             </Overload>
         </KeyWord>
 
-        <KeyWord name="gsSPSetLights" func="yes">
-            <Overload retVal="" descr="Loads light structures into the RSP.">
-                <Param name="LightsM lites" />
+        <KeyWord name="gsSPSetLights0" func="yes">
+            <Overload retVal="" descr="Loads light structures for ambient and diffuse lights into the
+light buffer. ">
+				<Param name="LightsM lites" />
             </Overload>
         </KeyWord>
 
-        <KeyWord name="gsSPSetLightsM" func="yes">
+        <KeyWord name="gsSPSetLights1" func="yes">
+            <Overload retVal="" descr="Loads light structures for ambient and diffuse lights into the
+light buffer. ">
+				<Param name="LightsM lites" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="gsSPSetLights2" func="yes">
+            <Overload retVal="" descr="Loads light structures for ambient and diffuse lights into the
+light buffer. ">
+				<Param name="LightsM lites" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="gsSPSetLights3" func="yes">
+            <Overload retVal="" descr="Loads light structures for ambient and diffuse lights into the
+light buffer. ">
+				<Param name="LightsM lites" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="gsSPSetLights4" func="yes">
+            <Overload retVal="" descr="Loads light structures for ambient and diffuse lights into the
+light buffer. ">
+				<Param name="LightsM lites" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="gsSPSetLights5" func="yes">
+            <Overload retVal="" descr="Loads light structures for ambient and diffuse lights into the
+light buffer. ">
+				<Param name="LightsM lites" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="gsSPSetLights6" func="yes">
+            <Overload retVal="" descr="Loads light structures for ambient and diffuse lights into the
+light buffer. ">
+				<Param name="LightsM lites" />
+            </Overload>
+        </KeyWord>
+
+        <KeyWord name="gsSPSetLights7" func="yes">
             <Overload retVal="" descr="Loads light structures for ambient and diffuse lights into the
 light buffer. ">
 				<Param name="LightsM lites" />
@@ -3682,6 +3986,10 @@ applications.">
             <Overload retVal="void" descr="Returns a fixed-point modeling matrix that can be used to
 align the model with a vector, plus a rotation around that vector.">
                 <Param name="Mtx m" />
+                <Param name="float a" />
+                <Param name="float x" />
+                <Param name="float y" />
+                <Param name="float z" />
             </Overload>
         </KeyWord>
 
@@ -3689,14 +3997,33 @@ align the model with a vector, plus a rotation around that vector.">
             <Overload retVal="void" descr="Returns a floating-point modeling matrix that can be used to
 align the model with a vector, plus a rotation around that vector.">
                 <Param name="float m[4][4]" />
+                <Param name="float a" />
+                <Param name="float x" />
+                <Param name="float y" />
+                <Param name="float z" />
             </Overload>
         </KeyWord>
 
         <KeyWord name="guDPLoadTextureTile" func="yes">
             <Overload retVal="void" descr="Old function that does what the gDPLoadTextureTile macro now
 does.">
-                <Param name="Gfx * temp" />
-                <Param name="void *timg" />
+                <Param name="Gfx *temp, " />
+                <Param name="oid *timg" />
+                <Param name="int texl_fmt" />
+                <Param name="int texl_size" />
+                <Param name="int img_width" />
+                <Param name="int img_height" />
+                <Param name="int uls" />
+                <Param name="int ult" />
+                <Param name="int lrs" />
+                <Param name="int lrt" />
+                <Param name="int palette" />
+                <Param name="int cms" />
+                <Param name="int cmt" />
+                <Param name="int masks" />
+                <Param name="int maskt" />
+                <Param name="int shifts" />
+                <Param name="int shiftt" />
             </Overload>
         </KeyWord>
 
@@ -3709,12 +4036,26 @@ does.">
         <KeyWord name="guFrustum" func="yes">
             <Overload retVal="void" descr="Computes a 4x4 fixed-point perspective projection matrix.">
                 <Param name="Mtx m" />
+                <Param name="float l" />
+                <Param name="float r" />
+                <Param name="float b" />
+                <Param name="float t" />
+                <Param name="float n" />
+                <Param name="float f" />
+                <Param name="float scale" />
             </Overload>
         </KeyWord>
 
         <KeyWord name="guFrustumF" func="yes">
             <Overload retVal="void" descr="Computes a 4x4 floating-point perspective projection matrix.">
                 <Param name="float m[4][4]" />
+                <Param name="float l" />
+                <Param name="float r" />
+                <Param name="float b" />
+                <Param name="float t" />
+                <Param name="float n" />
+                <Param name="float f" />
+                <Param name="float scale" />
             </Overload>
         </KeyWord>
 
@@ -3731,12 +4072,32 @@ the display list by the guDPLoadTextureTile function.">
 returns a display list for loading and rendering the mipmapped
 texture.">
                 <Param name="Gfx **glistp" />
+                <Param name="unsigned char *tbuf" />
+                <Param name="Image *imp" />
+                <Param name="unsigned char pal" />
+                <Param name="unsigned char cms" />
+                <Param name="unsigned char cmt" />
+                <Param name="unsigned char masks" />
+                <Param name="unsigned char maskt" />
+                <Param name="unsigned char shifts" />
+                <Param name="unsigned char shiftt" />
+                <Param name="unsigned char cfs" />
+                <Param name="unsigned char cft" />
             </Overload>
         </KeyWord>
 
         <KeyWord name="guLookAt" func="yes">
             <Overload retVal="void" descr="Computes and returns a fixed-point 4x4 'lookat' viewing matrix.">
                 <Param name="Mtx m" />
+                <Param name="float xEye" />
+                <Param name="float yEye" />
+                <Param name="float zEye" />
+                <Param name="float xAt" />
+                <Param name="float yAt" />
+                <Param name="float zAt" />
+                <Param name="float xUp" />
+                <Param name="float yUp" />
+                <Param name="float zUp " />
             </Overload>
         </KeyWord>
 
@@ -3744,6 +4105,15 @@ texture.">
             <Overload retVal="void" descr="Computes and returns a floating-point 4x4 'lookat' viewing
 matrix.">
                 <Param name="float m[4][4]" />
+                <Param name="float xEye" />
+                <Param name="float yEye" />
+                <Param name="float zEye" />
+                <Param name="float xAt" />
+                <Param name="float yAt" />
+                <Param name="float zAt" />
+                <Param name="float xUp" />
+                <Param name="float yUp" />
+                <Param name="float zUp " />
             </Overload>
         </KeyWord>
 
@@ -3753,6 +4123,25 @@ the LookAt structure for reflection mapping or specular hilite
 rendering, and computes texture offsets of two specular highlights
 (in the Hilite structure).">
                 <Param name="Mtx *m" />
+                <Param name="LookAt *l" />
+                <Param name="Hilite *h" />
+                <Param name="float xEye" />
+                <Param name="float yEye" />
+                <Param name="float zEye" />
+                <Param name="float xAt" />
+                <Param name="float yAt" />
+                <Param name="float zAt" />
+                <Param name="float xUp" />
+                <Param name="float yUp" />
+                <Param name="float zUp" />
+                <Param name="float xl1" />
+                <Param name="float yl1" />
+                <Param name="float zl1" />
+                <Param name="float xl2" />
+                <Param name="float yl2" />
+                <Param name="float zl2" />
+                <Param name="int twidth" />
+                <Param name="int theight" />
             </Overload>
         </KeyWord>
 
@@ -3762,6 +4151,25 @@ the LookAt structure for reflection mapping or specular hilite
 rendering, and computes texture offsets of two specular
 highlights (in the Hilite structure).">
                 <Param name="float m[4][4]" />
+                <Param name="LookAt *l" />
+                <Param name="Hilite *h" />
+                <Param name="float xEye" />
+                <Param name="float yEye" />
+                <Param name="float zEye" />
+                <Param name="float xAt" />
+                <Param name="float yAt" />
+                <Param name="float zAt" />
+                <Param name="float xUp" />
+                <Param name="float yUp" />
+                <Param name="float zUp" />
+                <Param name="float xl1" />
+                <Param name="float yl1" />
+                <Param name="float zl1" />
+                <Param name="float xl2" />
+                <Param name="float yl2" />
+                <Param name="float zl2" />
+                <Param name="int twidth" />
+                <Param name="int theight" />
             </Overload>
         </KeyWord>
 
@@ -3771,6 +4179,15 @@ up the LookAt structures with values for performing reflection
 mapping.">
                 <Param name="Mtx *m" />
                 <Param name="LookAt *l" />
+                <Param name="float xEye" />
+                <Param name="float yEye" />
+                <Param name="float zEye" />
+                <Param name="float xAt" />
+                <Param name="float yAt" />
+                <Param name="float zAt" />
+                <Param name="float xUp" />
+                <Param name="float yUp" />
+                <Param name="float zUp" />
             </Overload>
         </KeyWord>
 
@@ -3779,6 +4196,16 @@ mapping.">
 sets up the LookAt structures with values for performing
 reflection mapping.">
                 <Param name="float m[4][4]" />
+                <Param name="LookAt *l" />
+                <Param name="float xEye" />
+                <Param name="float yEye" />
+                <Param name="float zEye" />
+                <Param name="float xAt" />
+                <Param name="float yAt" />
+                <Param name="float zAt" />
+                <Param name="float xUp" />
+                <Param name="float yUp" />
+                <Param name="float zUp" />
             </Overload>
         </KeyWord>
 
@@ -3786,6 +4213,16 @@ reflection mapping.">
             <Overload retVal="void" descr="Returns a fixed-point 4x4 matrix (m) that can be used for one
 view of a stereographic projection.">
                 <Param name="Mtx m" />
+                <Param name="float xEye" />
+                <Param name="float yEye" />
+                <Param name="float zEye" />
+                <Param name="float xAt" />
+                <Param name="float yAt" />
+                <Param name="float zAt" />
+                <Param name="float xUp" />
+                <Param name="float yUp" />
+                <Param name="float zUp" />
+                <Param name="float eyedist" />
             </Overload>
         </KeyWord>
 
@@ -3793,24 +4230,39 @@ view of a stereographic projection.">
             <Overload retVal="void" descr="Returns a floating-point 4x4 matrix (m) that can be used for
 one view of a stereographic projection.">
                 <Param name="float m[4][4]" />
+                <Param name="float xEye" />
+                <Param name="float yEye" />
+                <Param name="float zEye" />
+                <Param name="float xAt" />
+                <Param name="float yAt" />
+                <Param name="float zAt" />
+                <Param name="float xUp" />
+                <Param name="float yUp" />
+                <Param name="float zUp" />
+                <Param name="float eyedist" />
             </Overload>
         </KeyWord>
 
         <KeyWord name="guMtxCatF" func="yes">
             <Overload retVal="void" descr="Concatenates two 4x4 floating-point matrices.">
                 <Param name="float mf[4][4]" />
+                <Param name="float nf[4][4]" />
+                <Param name="float resf[4][4]" />
             </Overload>
         </KeyWord>
 
         <KeyWord name="guMtxCatL" func="yes">
             <Overload retVal="void" descr="Concatenates two 4x4 fixed-point matrices.">
                 <Param name="Mtx *m" />
+                <Param name="Mtx *n" />
+                <Param name="Mtx *res" />
             </Overload>
         </KeyWord>
 
         <KeyWord name="guMtxF2L" func="yes">
             <Overload retVal="void" descr="Converts a 4x4 floating-point matrix to a fixed-point matrix.">
                 <Param name="float mf[4][4]" />
+                <Param name="Mtx *m" />
             </Overload>
         </KeyWord>
 
@@ -3829,24 +4281,39 @@ one view of a stereographic projection.">
         <KeyWord name="guMtxL2F" func="yes">
             <Overload retVal="void" descr="Converts a 4x4 fixed-point matrix to a floating-point matrix.">
                 <Param name="float mf[4][4]" />
+                <Param name="Mtx *m" />
             </Overload>
         </KeyWord>
 
         <KeyWord name="guMtxXFMF" func="yes">
             <Overload retVal="void" descr="Transforms a single point by a 4x4 floating-point matrix.">
                 <Param name="float mf[4][4]" />
+                <Param name="float x" />
+                <Param name="float y" />
+                <Param name="float z" />
+                <Param name="float *ox" />
+                <Param name="float *oy" />
+                <Param name="float *oz" />
             </Overload>
         </KeyWord>
 
         <KeyWord name="guMtxXFML" func="yes">
             <Overload retVal="void" descr="Transforms a single point by a 4x4 fixed-point matrix.">
                 <Param name="Mtx *m" />
+                <Param name="float x" />
+                <Param name="float y" />
+                <Param name="float z" />
+                <Param name="float *ox" />
+                <Param name="float *oy" />
+                <Param name="float *oz" />
             </Overload>
         </KeyWord>
 
         <KeyWord name="guNormalize" func="yes">
             <Overload retVal="void" descr="Normalizes a 3D vector.">
                 <Param name="float *x" />
+                <Param name="float *y" />
+                <Param name="float *z" />
             </Overload>
         </KeyWord>
 
@@ -3854,6 +4321,13 @@ one view of a stereographic projection.">
             <Overload retVal="void" descr="Computes and returns an orthographic 4x4 fixed-point
 projection matrix for an orthographic parallel viewing volume.">
                 <Param name="Mtx m" />
+                <Param name="float l" />
+                <Param name="float r" />
+                <Param name="float b" />
+                <Param name="float t" />
+                <Param name="float n" />
+                <Param name="float f" />
+                <Param name="float scale" />
             </Overload>
         </KeyWord>
 
@@ -3861,6 +4335,13 @@ projection matrix for an orthographic parallel viewing volume.">
             <Overload retVal="void" descr="Computes and returns an orthographic 4x4 floating-point
 projection matrix for an orthographic parallel viewing volume.">
                 <Param name="float m[4][4]" />
+                <Param name="float l" />
+                <Param name="float r" />
+                <Param name="float b" />
+                <Param name="float t" />
+                <Param name="float n" />
+                <Param name="float f" />
+                <Param name="float scale" />
             </Overload>
         </KeyWord>
 
@@ -3881,6 +4362,12 @@ projection matrix for an orthographic parallel viewing volume.">
 matrix and returns a number to use with the gSPPerspNormalize
 function.">
                 <Param name="Mtx m" />
+                <Param name="u16 *perspNorm" />
+                <Param name="float fovy" />
+                <Param name="float aspect" />
+                <Param name="float near" />
+                <Param name="float far" />
+                <Param name="float scale" />
             </Overload>
         </KeyWord>
 
@@ -3889,6 +4376,12 @@ function.">
 projection matrix and returns a number to use with the gSPPerspNormalize
 function.">
                 <Param name="float m[4][4]" />
+                <Param name="u16 *perspNorm" />
+                <Param name="float fovy" />
+                <Param name="float aspect" />
+                <Param name="float near" />
+                <Param name="float far" />
+                <Param name="float scale" />
             </Overload>
         </KeyWord>
 
@@ -3897,6 +4390,13 @@ function.">
 locates an object at a specified position with a specified
 orientation.">
                 <Param name="Mtx *m" />
+                <Param name="float r" />
+                <Param name="float p" />
+                <Param name="float h" />
+                <Param name="float s" />
+                <Param name="float x" />
+                <Param name="float y" />
+                <Param name="float z" />
             </Overload>
         </KeyWord>
 
@@ -3905,6 +4405,13 @@ orientation.">
 locates an object at a specified position with a specified
 orientation.">
                 <Param name="float mf[4][4]" />
+                <Param name="float r" />
+                <Param name="float p" />
+                <Param name="float h" />
+                <Param name="float s" />
+                <Param name="float x" />
+                <Param name="float y" />
+                <Param name="float z" />
             </Overload>
         </KeyWord>
 
@@ -3913,6 +4420,10 @@ orientation.">
 structure for a single positional light without calculating
 specular hilite related values.">
                 <Param name="PositionalLight *pl" />
+                <Param name="Light *l" />
+                <Param name="float xOb" />
+                <Param name="float yOb" />
+                <Param name="float zOb" />
             </Overload>
         </KeyWord>
 
@@ -3921,6 +4432,22 @@ specular hilite related values.">
 structure for two positional lights and their hilite and lookat
 value for rendering specular highlights.">
                 <Param name="PositionalLight *pl1" />
+                <Param name="PositionalLight *pl2" />
+                <Param name="Light *l1" />
+                <Param name="Light *l2" />
+                <Param name="LookAt *l" />
+                <Param name="Hilite *h" />
+                <Param name="float xEye" />
+                <Param name="float yEye" />
+                <Param name="float zEye" />
+                <Param name="float xOb" />
+                <Param name="float yOb" />
+                <Param name="float zOb" />
+                <Param name="float xUp" />
+                <Param name="float yUp" />
+                <Param name="float zUp" />
+                <Param name="int twidth" />
+                <Param name="int theight" />
             </Overload>
         </KeyWord>
 
@@ -3936,6 +4463,9 @@ value for rendering specular highlights.">
 matrix by working with guRotateRPY.">
                 <Param name="Mtx m" />
                 <Param name="float a" />
+                <Param name="float x" />
+                <Param name="float y" />
+                <Param name="float z" />
             </Overload>
         </KeyWord>
 
@@ -3943,6 +4473,10 @@ matrix by working with guRotateRPY.">
             <Overload retVal="void" descr="Computes and returns a floating-point 4x4 rotational modeling
 matrix by woring with guRotateRPYF.">
                 <Param name="float m[4][4]" />
+                <Param name="float a" />
+                <Param name="float x" />
+                <Param name="float y" />
+                <Param name="float z" />
             </Overload>
         </KeyWord>
 
@@ -3950,6 +4484,9 @@ matrix by woring with guRotateRPYF.">
             <Overload retVal="void" descr="Computes and returns a fixed-point 4x4 rotational modeling
 matrix by working with guRotateRPY.">
                 <Param name="Mtx m" />
+                <Param name="float r" />
+                <Param name="float p" />
+                <Param name="float y" />
             </Overload>
         </KeyWord>
 
@@ -3957,6 +4494,9 @@ matrix by working with guRotateRPY.">
             <Overload retVal="void" descr="Computes and returns a floating-point 4x4 rotational modeling
 matrix by woring with guRotateRPYF.">
                 <Param name="float m[4][4]" />
+                <Param name="float r" />
+                <Param name="float p" />
+                <Param name="float y" />
             </Overload>
         </KeyWord>
 
@@ -3991,6 +4531,9 @@ to have the CPU emulate the S2DEX microcode.">
             <Overload retVal="void" descr="Computes and returns a fixed-point, scaling modeling, 4x4
 matrix.">
                 <Param name="Mtx m" />
+                <Param name="float x" />
+                <Param name="float y" />
+                <Param name="float z" />
             </Overload>
         </KeyWord>
 
@@ -3998,6 +4541,9 @@ matrix.">
             <Overload retVal="void" descr="Computes and returns a floating-point, scaling modeling, 4x4
 matrix.">
                 <Param name="float m[4][4]" />
+                <Param name="float x" />
+                <Param name="float y" />
+                <Param name="float z" />
             </Overload>
         </KeyWord>
 
@@ -4027,6 +4573,9 @@ microcode.">
             <Overload retVal="void" descr="Computes and returns a translation modeling fixed-point 4x4
 matrix.">
                 <Param name="Mtx m" />
+                <Param name="float x" />
+                <Param name="float y" />
+                <Param name="float z" />
             </Overload>
         </KeyWord>
 
@@ -4034,6 +4583,9 @@ matrix.">
             <Overload retVal="void" descr="Computes and returns a translation modeling floating-point 4x4
 matrix.">
                 <Param name="float m[4][4]" />
+                <Param name="float x" />
+                <Param name="float y" />
+                <Param name="float z" />
             </Overload>
         </KeyWord>
 
@@ -5282,7 +5834,10 @@ mutual exclusion and synchronization support for the PI devices.">
 to make it known to the N64 debugger.">
                 <Param name="OSThread *t" />
                 <Param name="OSId id" />
-                <Param name="void (*entry" />
+                <Param name="void (*entry) (void *)" />
+                <Param name="void *arg" />
+                <Param name="void *sp" />
+                <Param name="OSPri pri" />
             </Overload>
         </KeyWord>
 
@@ -5868,6 +6423,7 @@ address.">
             <Overload retVal="s32" descr="Performs a 32-bit programmed IO read from a specified PI
 device address and returns the value in data.">
                 <Param name="u32 devAddr" />
+                <Param name="u32 *data" />
             </Overload>
         </KeyWord>
 
@@ -5876,6 +6432,12 @@ device address and returns the value in data.">
 space by sending a specified I/O message block request to the PI
 manager.">
                 <Param name="OSIoMesg *mb" />
+                <Param name="s32 priority" />
+                <Param name="s32 direction" />
+                <Param name="u32 devAddr" />
+                <Param name="void *vAddr" />
+                <Param name="u32 nbytes" />
+                <Param name="OSMesgQueue *mq" />
             </Overload>
         </KeyWord>
 
@@ -5883,6 +6445,7 @@ manager.">
             <Overload retVal="s32" descr="Performs a 32-bit programmed IO write to a specified PI device
 address.">
                 <Param name="u32 devAddr" />
+                <Param name="u32 data" />
             </Overload>
         </KeyWord>
 
@@ -5925,6 +6488,8 @@ and copy it to DRAM.">
             <Overload retVal="s32" descr="Copies the first message in the message queue into a specified
 address.">
                 <Param name="OSMesgQueue *mq" />
+                <Param name="OSMesg *msg" />
+                <Param name="s32 flag" />
             </Overload>
         </KeyWord>
 
@@ -8004,6 +8569,66 @@ texture memory (TMEM).">
 				<Param name="u32 shiftt" />
             </Overload>
         </KeyWord>
-
+        
+        <KeyWord name="uhOpenGame" func="yes">
+            <Overload retVal="int" descr="The uhOpenGame routine performs initialization that allows communication events to be received by the specified device.">
+				<Param name="const char *device" />
+            </Overload>
+        </KeyWord>
+        
+        <KeyWord name="uhCloseGame" func="yes">
+            <Overload retVal="int" descr="The uhCloseGame procedure can be used if desired to close the given file descriptor.">
+				<Param name="int fd" />
+            </Overload>
+        </KeyWord>
+        
+        <KeyWord name="uhReadGame" func="yes">
+            <Overload retVal="int" descr="The uhReadGame routine attempts to read nbytes of data from the game and copy it to the memory region beginning at addr.">
+				<Param name="int fd" />
+                <Param name="void *addr" />
+                <Param name="int nbytes" />
+            </Overload>
+        </KeyWord>
+        
+        <KeyWord name="uhWriteGame" func="yes">
+            <Overload retVal="int" descr="The uhWriteGame routine attempts to copy nbytes of data from the host beginning at addr to the game.">
+				<Param name="int fd" />
+                <Param name="void *addr" />
+                <Param name="int nbytes" />
+            </Overload>
+        </KeyWord>
+        
+        <KeyWord name="uhWriteRamrom" func="yes">
+            <Overload retVal="int" descr="The uhWriteRamrom routine attempts to write nbytes from data to the ramrom memory beginning at ramrom_addr. ">
+            <Param name="int fd" />
+            <Param name="void *ramrom_addr" />
+            <Param name="void *local_addr" />
+            <Param name="int nbytes" />
+            </Overload>
+        </KeyWord>
+        
+        <KeyWord name="uhReadRamrom" func="yes">
+            <Overload retVal="int" descr="The uhReadRamrom routine attempts to copy nbytes of data from the ramrom memory, beginning at ramrom_addr.">
+                <Param name="int fd" />
+                <Param name="void *ramrom_addr" />
+                <Param name="void *local_addr" />
+                <Param name="int nbytes" />
+            </Overload>
+        </KeyWord>
+        
+        <KeyWord name="uhPartnerCmd" func="yes">
+            <Overload retVal="int" descr="uhPartnerCmd issues the various commands that PARTNER can use. For more information, see the PARTNER manual.">
+                <Param name="int fd" />
+                <Param name="char *cmd" />
+            </Overload>
+        </KeyWord>
+        
+        <KeyWord name="uhGload" func="yes">
+            <Overload retVal="int" descr="uhGLoad uses PARTNER to load and execute the 64 game specified bygamename.">
+                <Param name="int fd" />
+                <Param name="char *cmd" />
+            </Overload>
+        </KeyWord>
+        
     </AutoComplete>
 </NotepadPlus>
