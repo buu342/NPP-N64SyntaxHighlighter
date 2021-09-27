@@ -21,7 +21,7 @@ Autocompletion - Edit the XML file inside the notepad++/plugins/APIs folder<br/>
 
 ### How to compile the source code
 1. Download and install a copy of [Visual Studio 2008](https://www.microsoft.com/en-us/download/details.aspx?id=7873).
-2. Download a copy of [Notepad++ 5.8's source code](https://notepad-plus-plus.org/download/v5.8.html).
+2. Download a copy of [Notepad++ 5.8's source code](https://github.com/notepad-plus-plus/notepad-plus-plus/releases/tag/v5.8).
 3. Place the NP++ Source code in a folder. 
 4. Place this syntax highlighter's source code in the same folder so it is next to the PowerEditor and Scintilla folders.
 5. Rename the sourcecode folder to N64C
