@@ -5807,6 +5807,9 @@ empty state.">
             <Overload retVal="void" descr="Creates and starts the PI Manager system thread to provide
 mutual exclusion and synchronization support for the PI devices.">
                 <Param name="OSPri pri" />
+                <Param name="OSMesgQueue *cmdQ" />
+                <Param name="OSMesg *cmdBuf" />
+                <Param name="s32 cmdMsgCnt" />
             </Overload>
         </KeyWord>
 
@@ -6593,6 +6596,8 @@ register.">
                 <Param name="OSTimer *timer" />
                 <Param name="OSTime countdown" />
                 <Param name="OSTime interval" />
+                <Param name="OSMesgQueue *mq" />
+                <Param name="OSMesg msg" />
             </Overload>
         </KeyWord>
 
